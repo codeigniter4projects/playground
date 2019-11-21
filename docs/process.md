@@ -59,7 +59,7 @@ to those who would.
 
 ## Create docs
 
-*Commit *
+*Commit ca25c36*
 
 We create the [docs](docs/) and save this file that we have been typing diligently
 in the spirit of making this repo well documented.
