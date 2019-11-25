@@ -34,7 +34,7 @@ With those out of the way, it only takes a few small steps to get the project up
 
 1 - Clone the repo if you haven't already, from the CLI:
 
-> git clone https://github.com/tattersoftware/playground
+> git clone https://github.com/codeigniter4projects/playground
 
 That creates a new directory, `playground`, under your current directory.
 
