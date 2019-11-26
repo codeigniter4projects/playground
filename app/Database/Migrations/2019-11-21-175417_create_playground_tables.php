@@ -24,6 +24,7 @@ class CreatePlaygroundTables extends Migration
 			'class'      => ['type' => 'varchar', 'constraint' => 63],
 			'level'      => ['type' => 'int', 'null' => true],
 			'image'      => ['type' => 'varchar', 'constraint' => 255],
+			'pronoun'    => ['type' => 'varchar', 'constraint' => 15],
 			'created_at' => ['type' => 'datetime', 'null' => true],
 			'updated_at' => ['type' => 'datetime', 'null' => true],
 			'deleted_at' => ['type' => 'datetime', 'null' => true],
