@@ -14,21 +14,21 @@ class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
      *
      * @var string
      */
-    protected $seed = 'ProjectTests\Support\Database\Seeds\ExampleSeeder';
+    protected $seed = 'App\Database\Seeds\PlaygroundSeeder';
 
     /**
      * The path to where we can find the test Seeds directory.
      *
      * @var string
      */
-    protected $basePath = SUPPORTPATH . 'Database/';
+    protected $basePath = APPPATH . 'Database/';
 
     /**
      * The namespace to help us find the migration classes.
      *
      * @var string
      */
-    protected $namespace = 'ProjectTests\Support';
+    protected $namespace = 'App';
 
     public function setUp(): void
     {
