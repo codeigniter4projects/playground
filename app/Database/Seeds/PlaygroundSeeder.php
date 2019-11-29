@@ -37,14 +37,42 @@ class PlaygroundSeeder extends Seeder
 				'image'      => 'Default.png',
 			],
 		];
-		
+
 		$builder = $this->db->table('heroes');
 		foreach ($rows as $row)
 		{
 			$row['created_at'] = date('Y-m-d H:i:s');
 			$row['updated_at'] = date('Y-m-d H:i:s');
-			
+
 			$builder->insert($row);
 		}
+
+		// Dungeons
+        $rows = [
+            [
+                'name'       => 'Palace of the Inquisition',
+                'difficulty' => 4,
+                'capacity'   => 25
+            ],
+            [
+                'name'       => 'Warwick\'s Revenge',
+                'difficulty' => 6,
+                'capacity'   => 15
+            ],
+            [
+                'name'       => 'The Den of Horrors',
+                'difficulty' => 10,
+                'capacity'   => 42
+            ],
+        ];
+
+        $builder = $this->db->table('dungeons');
+        foreach ($rows as $row)
+        {
+            $row['created_at'] = date('Y-m-d H:i:s');
+            $row['updated_at'] = date('Y-m-d H:i:s');
+
+            $builder->insert($row);
+        }
 	}
 }
