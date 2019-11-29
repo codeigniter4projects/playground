@@ -56,9 +56,26 @@
             <h2>Dungeons</h2>
 
             <?php if (isset($dungeons) && count($dungeons)) : ?>
-                <?php foreach ($dungeons as $dungeon) : ?>
-
-                <?php endforeach ?>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th style="width: 3em">ID</th>
+                        <th>Name</th>
+                        <th>Difficulty</th>
+                        <th>Capacity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($dungeons as $dungeon) : ?>
+                        <tr>
+                            <td><?= $dungeon->id ?></td>
+                            <td><a href="<?= $dungeon->link() ?>"><?= esc($dungeon->name ?? '') ?></a></td>
+                            <td><?= $dungeon->difficulty ?? 0 ?></td>
+                            <td><?= $dungeon->capacity ?? 0 ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
             <?php else : ?>
                 <div class="alert alert-warning">
                     No Dungeons found.
