@@ -18,6 +18,21 @@
     <br>
 
     <?= $this->renderSection('content') ?>
+
+    <br>
+    <hr>
+
+    <div class="footer row">
+        <div class="col">
+            <p>Page rendered in {elapsed_time} seconds.</p>
+        </div>
+        <div class="col">
+            <p class="text-center">PHP <?= phpversion() ?></p>
+        </div>
+        <div class="col">
+            <p class="text-right">Environment: <?= ENVIRONMENT ?></p>
+        </div>
+    </div>
 </div>
 
 <!-- Optional JavaScript -->
