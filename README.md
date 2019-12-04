@@ -45,21 +45,17 @@ cd playground
 composer install
 ```
 
-3 - Copy `.env.example` in the project directory and name it `.env`. Then open it up and make a couple of edits:
-```
-CI_ENVIRONMENT = development
-app.baseURL = 'http://localhost:8080/'
-```
+3 - Copy `.env.example` in the project directory and name it `.env`. Then open it up and verify the settings:
 
-First we uncommented the `CI_ENVIRONMENT` line and changed `production` to `development`. This enables error
-handling, the debug toolbar, and some other things handy while in development. 
+* First, `CI_ENVIRONMENT` is set to `development` as this enables error handling, the debug toolbar, and some other
+	things handy while in development. 
 
-Next, make sure that `app.baseURL` matches whatever you are currently running your site at. If you use `spark`, 
-then it already matches the default. If this doesn't match, then generated links might not work, and your 
-developer toolbar will never show up. 
+* Next make sure that `app.baseURL` matches whatever you are currently running your site at. If you use `spark`, 
+	then it already matches the default. If this doesn't match, then generated links might not work, and your 
+	developer toolbar will never show up. 
 
-While you're in there, you can edit your database settings, though you can do that in `app/Config/Database.php`
-just as easily. Since we won't deploy this to multiple servers it's no big deal to edit the config files directly.
+* Finally while you're in there, you can edit your database settings, though you can do that in `app/Config/Database.php`
+	just as easily. Since we won't deploy this to multiple servers it's no big deal to edit the config files directly.
 
 4 - Back on the command line, we install all of the needed database tables and sample data. 
 ```
