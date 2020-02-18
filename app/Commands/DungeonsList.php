@@ -6,15 +6,15 @@ use CodeIgniter\CLI\CLI;
 
 class DungeonsList extends BaseCommand
 {
-    protected $group       = 'Playground';
-    protected $name        = 'dungeons:list';
-    protected $description = 'List all dungeons by difficulty';
+	protected $group       = 'Playground';
+	protected $name        = 'dungeons:list';
+	protected $description = 'List all dungeons by difficulty';
 	protected $usage       = 'dungeons:list';
 	protected $arguments   = [];
 
 	public function run(array $params = [])
-    {
-        $row = (new DungeonModel())
+	{
+		$row = (new DungeonModel())
 			->select('id, name, difficulty, capacity')
 			->orderBy('difficulty', 'desc')
 			->get()->getResultArray();
