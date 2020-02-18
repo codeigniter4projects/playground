@@ -34,44 +34,43 @@ With those out of the way, it only takes a few small steps to get the project up
 
 1 - Clone the repo if you haven't already, from the CLI:
 
-    git clone https://github.com/codeigniter4projects/playground
+	git clone https://github.com/codeigniter4projects/playground
 
 That creates a new directory, `playground`, under your current directory.
 
 2 - Enter the new directory and install the project dependencies with Composer. NOTE: The command shown
 here assumes that you have Composer loaded globally. If you don't, then pretend we're using `composer.phar`.
+```
+cd playground
+composer install
+```
 
-    cd playground
-    composer install
+3 - Copy `.env.example` in the project directory and name it `.env`. Then open it up and verify the settings:
 
-3 - Copy `.env.example` in the project directory and name it `.env`. Then open it up and make a couple of edits:
+* First, `CI_ENVIRONMENT` is set to `development` as this enables error handling, the debug toolbar, and some other
+	things handy while in development. 
 
-    CI_ENVIRONMENT = development
-    app.baseURL = 'http://localhost:8080/'
+* Next make sure that `app.baseURL` matches whatever you are currently running your site at. If you use `spark`, 
+	then it already matches the default. If this doesn't match, then generated links might not work, and your 
+	developer toolbar will never show up. 
 
-First we uncommented the `CI_ENVIRONMENT` line and changed `production` to `development`. This enables error
-handling, the debug toolbar, and some other things handy while in development. 
-
-Next, make sure that `app.baseURL` matches whatever you are currently running your site at. If you use `spark`, 
-then it already matches the default. If this doesn't match, then generated links might not work, and your 
-developer toolbar will never show up. 
-
-While you're in there, you can edit your database settings, though you can do that in `app/Config/Database.php`
-just as easily. Since we won't deploy this to multiple servers it's no big deal to edit the config files directly.
+* Finally while you're in there, you can edit your database settings, though you can do that in `app/Config/Database.php`
+	just as easily. Since we won't deploy this to multiple servers it's no big deal to edit the config files directly.
 
 4 - Back on the command line, we install all of the needed database tables and sample data. 
-
-    php spark migrate
-    php spark db:seed PlaygroundSeeder
+```
+php spark migrate
+php spark db:seed PlaygroundSeeder
+```
 
 5 - That's it! If you're hosting through Apache, Nginx, etc, then head to your site. If you just want a quick
 way to work with your site locally, go back to the CLI and start up `spark`, CodeIgniter's small server. 
 
-    php spark serve
+	php spark serve
 
 If you get would like to change the port it's running on, that's no problem: 
 
-    php spark serve --port 8081
+	php spark serve --port 8081
 
 Enjoy! 
 
