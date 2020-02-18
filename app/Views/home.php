@@ -37,7 +37,7 @@
                                 Always escape data that users could have entered with the
                                 `esc()` function. By default it assumes it's part of HTML.
                             -->
-                            <td><a href="/heroes/<?= $hero->id ?>"><?= esc($hero->name ?? '') ?></a></td>
+                            <td><a href="<?= base_url() ?>/heroes/<?= $hero->id ?>"><?= esc($hero->name ?? '') ?></a></td>
                             <td><?= $hero->level ?? 0 ?></td>
                             <td><?= esc($hero->class ?? '') ?></td>
                         </tr>
