@@ -1,6 +1,6 @@
 <?php
 
-class HomeTest extends \ProjectTests\Support\FeatureTestCase
+class HomeTest extends \Tests\Support\FeatureTestCase
 {
     public function setUp(): void
     {

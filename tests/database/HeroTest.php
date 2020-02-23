@@ -1,6 +1,6 @@
 <?php
 
-class HeroTest extends ProjectTests\Support\DatabaseTestCase
+class HeroTest extends \Tests\Support\DatabaseTestCase
 {
 	public function setUp(): void
 	{
