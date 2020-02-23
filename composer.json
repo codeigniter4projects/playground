@@ -8,12 +8,12 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "https://github.com/MGatner/codeigniter4"
+			"url": "https://github.com/codeigniter4/codeigniter4"
 		}
 	],
    "require": {
 		"php": ">=7.2",
-		"codeigniter4/codeigniter4": "dev-tests-refactor"
+		"codeigniter4/codeigniter4": "dev-develop"
 	},
 	"require-dev": {
 		"mikey179/vfsstream": "1.6.*",
