@@ -42,8 +42,8 @@ jobs:
 
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --no-interaction --prefer-dist --optimize-autoloader
-        env:
-          # To prevent rate limiting you may need to supply an OAuth token in Settings > Secrets
+        # To prevent rate limiting you may need to supply an OAuth token in Settings > Secrets
+        # env:
           # https://getcomposer.org/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens
           # COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
 
