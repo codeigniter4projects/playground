@@ -1,39 +1,39 @@
 {
-    "name": "codeigniter4projects/playground",
-    "type": "project",
-    "description": "A space to learn and experience CodeIgniter 4",
-    "homepage": "https://codeigniter.com",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/codeigniter4/codeigniter4"
-        }
-    ],
+	"name": "codeigniter4projects/playground",
+	"type": "project",
+	"description": "A space to learn and experience CodeIgniter 4",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/codeigniter4/codeigniter4"
+		}
+	],
    "require": {
-        "php": ">=7.2",
-        "codeigniter4/codeigniter4": "dev-develop"
-    },
-    "require-dev": {
-        "mikey179/vfsstream": "1.6.*",
-        "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^7.0"
-    },
+		"php": ">=7.2",
+		"codeigniter4/codeigniter4": "dev-develop"
+	},
+	"require-dev": {
+		"mikey179/vfsstream": "1.6.*",
+		"mockery/mockery": "^1.0",
+		"phpunit/phpunit": "8.5.*"
+	},
 	"autoload-dev": {
 		"psr-4": {
-			"ProjectTests\\Support\\": "tests/_support"
+			"Tests\\Support\\": "tests/_support"
 		}
 	},
-    "scripts": {
+	"scripts": {
 		"test": "phpunit",
-        "post-update-cmd": [
-            "composer dump-autoload"
-        ]
-    },
-    "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4projects/playground",
-        "slack": "https://codeigniterchat.slack.com"
-    }
+		"post-update-cmd": [
+			"composer dump-autoload"
+		]
+	},
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"source": "https://github.com/codeigniter4projects/playground",
+		"slack": "https://codeigniterchat.slack.com"
+	}
 }
