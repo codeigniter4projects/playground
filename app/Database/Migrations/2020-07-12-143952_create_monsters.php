@@ -6,6 +6,9 @@ class CreateMonsters extends Migration
 {
 	public function up()
 	{
+		// We aren't actually going to use foreign keys (see below) but it is a good idea to toggle them in your seeder.
+		$this->db->disableForeignKeyChecks();
+
 		/**
 		 * Monsters
 		 *
@@ -84,12 +87,18 @@ class CreateMonsters extends Migration
 		//$this->forge->addForeignKey('monster_id', 'monsters', 'id', false, 'CASCADE');
 		
 		$this->forge->createTable('abilities_monsters');
+
+		$this->db->enableForeignKeyChecks();
 	}
 
 	public function down()
 	{
+		$this->db->disableForeignKeyChecks();
+
 		$this->forge->dropTable('monsters');
 		$this->forge->dropTable('abilities');
 		$this->forge->dropTable('abilities_monsters');
+
+		$this->db->enableForeignKeyChecks();
 	}
 }
