@@ -2,6 +2,7 @@
 
 use App\Entities\Monster;
 use App\Models\MonsterModel;
+use CodeIgniter\Test\Fabricator;
 use CodeIgniter\Test\Interfaces\FabricatorModel;
 use Faker\Generator;
 

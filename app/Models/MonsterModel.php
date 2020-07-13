@@ -7,7 +7,7 @@ class MonsterModel extends Model
 	protected $table      = 'monsters';
 	protected $primaryKey = 'id';
 
-	protected $returnType = 'App\Entities\Dungeon';
+	protected $returnType = 'App\Entities\Monster';
 	protected $useSoftDeletes = true;
 
 	protected $allowedFields = ['name', 'health', 'dungeon_id'];
