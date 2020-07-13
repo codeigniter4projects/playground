@@ -1,7 +1,7 @@
 # Playground
 A space to learn and experience CodeIgniter 4
 
-[![](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4projects/playground/actions?query=workflow%3APHPUnit)
+![PHPUnit](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)
 
 This playground is here to help you learn CodeIgniter 4 by example. We try to cover use cases for the most
 common tasks you'll find yourself doing in web applications. Where there are multiple ways to do something,
