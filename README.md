@@ -76,3 +76,7 @@ If you get would like to change the port it's running on, that's no problem:
 
 Enjoy! 
 
+## Code Challenges
+
+There are some portions of the code intentionally left for *you* to finish. Once you are familiar with
+the project and have read through the docs try searching the code for anything with the comment **Help!**.
