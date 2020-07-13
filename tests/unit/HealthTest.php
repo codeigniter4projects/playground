@@ -16,6 +16,11 @@ class HealthTest extends \CodeIgniter\Test\CIUnitTestCase
 
 	public function testBaseUrlHasBeenSet()
 	{
+		if (getenv('CI') !== false)
+		{
+			$this->markTestSkipped('Base URL not available during Continuous Integration');
+		}
+
 		$env = $config = false;
 
 		// First check in .env
