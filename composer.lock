@@ -27,15 +27,17 @@
                 "ext-mbstring": "*",
                 "kint-php/kint": "^3.3",
                 "laminas/laminas-escaper": "^2.6",
-                "php": ">=7.2",
+                "php": "^7.2 || ^8.0",
                 "psr/log": "^1.1"
             },
             "require-dev": {
                 "codeigniter4/codeigniter4-standard": "^1.0",
-                "fzaninotto/faker": "^1.9@dev",
-                "mikey179/vfsstream": "1.6.*",
+                "fakerphp/faker": "^1.9",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^8.5",
                 "predis/predis": "^1.1",
+                "rector/rector": "^0.8",
                 "squizlabs/php_codesniffer": "^3.3"
             },
             "type": "project",
@@ -44,11 +46,18 @@
                     "CodeIgniter\\": "system/"
                 }
             },
+            "autoload-dev": {
+                "psr-4": {
+                    "Utils\\": "utils"
+                }
+            },
             "scripts": {
                 "post-update-cmd": [
-                    "@composer dump-autoload",
                     "CodeIgniter\\ComposerScripts::postUpdate",
                     "bash admin/setup.sh"
+                ],
+                "analyze": [
+                    "phpstan analyze"
                 ],
                 "test": [
                     "phpunit"
@@ -365,16 +374,16 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.9.1",
+            "version": "v1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f"
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/fc10d778e4b84d5bd315dad194661e091d307c6f",
-                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
                 "shasum": ""
             },
             "require": {
@@ -411,7 +420,8 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2019-12-12T13:22:17+00:00"
+            "abandoned": true,
+            "time": "2020-12-11T09:56:16+00:00"
         },
         {
             "name": "mikey179/vfsstream",
@@ -1075,6 +1085,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -1960,8 +1971,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "codeigniter4/codeigniter4": 20,
-        "fzaninotto/faker": 20
+        "codeigniter4/codeigniter4": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
