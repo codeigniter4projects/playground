@@ -1,0 +1,23 @@
+parameters:
+	tmpDir: build/phpstan
+	level: 5
+	paths:
+		- app
+		- tests
+	bootstrapFiles:
+		- vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php
+	excludes_analyse:
+		- app/Config/Routes.php
+		- app/Views/*
+	ignoreErrors:
+		- '#Cannot access property [\$a-z_]+ on (array|object)#'
+		- '#Unsafe usage of new static\(\)*#'
+	universalObjectCratesClasses:
+		- CodeIgniter\Entity
+		- Faker\Generator
+	scanDirectories:
+		- vendor/codeigniter4/codeigniter4/system/Helpers
+	dynamicConstantNames:
+		- APP_NAMESPACE
+		- CI_DEBUG
+		- ENVIRONMENT
