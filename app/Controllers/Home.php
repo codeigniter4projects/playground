@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\DungeonModel;
 use App\Models\HeroModel;
@@ -25,7 +27,4 @@ class Home extends BaseController
                 ->findAll(),
         ]);
 	}
-
-	//--------------------------------------------------------------------
-
 }
