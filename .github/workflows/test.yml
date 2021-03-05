@@ -2,16 +2,19 @@ name: PHPUnit
 
 on:
   pull_request:
-    branches: 
+    branches:
+      - develop
+  push:
+    branches:
       - develop
 
 jobs:
   main:
-    name: Build and test
+    name: PHP ${{ matrix.php-versions }} Unit Tests
 
     strategy:
       matrix:
-        php-versions: ['7.2', '7.3', '7.4']
+        php-versions: ['7.3', '7.4', '8.0']
 
     runs-on: ubuntu-latest
 
@@ -22,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup PHP, with composer and extensions
-        uses: shivammathur/setup-php@master
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
           tools: composer, pecl, phpunit
@@ -34,18 +37,18 @@ jobs:
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
       - name: Cache composer dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
-        run: composer install --no-progress --no-suggest --no-interaction --prefer-dist --optimize-autoloader
+        run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
         # To prevent rate limiting you may need to supply an OAuth token in Settings > Secrets
         # env:
           # https://getcomposer.org/doc/articles/troubleshooting.md#api-rate-limit-and-oauth-tokens
           # COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
 
-      - name: Test with phpunit
-        run: vendor/bin/phpunit --coverage-text
+      - name: Test with PHPUnit
+        run: vendor/bin/phpunit --verbose --coverage-text

@@ -2,34 +2,46 @@
 	"name": "codeigniter4projects/playground",
 	"type": "project",
 	"description": "A space to learn and experience CodeIgniter 4",
+	"keywords": [
+		"codeigniter",
+		"codeigniter4"
+	],
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/codeigniter4/codeigniter4"
-		}
-	],
 	"require": {
-		"php": ">=7.2",
+		"php": "^7.3 || ^8.0",
 		"codeigniter4/codeigniter4": "dev-develop"
 	},
 	"require-dev": {
-		"fzaninotto/faker": "^1.9@dev",
-		"mikey179/vfsstream": "1.6.*",
-		"phpunit/phpunit": "^8.5"
+		"codeigniter4/codeigniter4-standard": "^1.0",
+		"fakerphp/faker": "^1.9",
+		"mikey179/vfsstream": "^1.6",
+		"phpstan/phpstan": "^0.12",
+		"phpunit/phpunit": "^8.0 || ^9.0",
+		"rector/rector": "^0.9",
+		"squizlabs/php_codesniffer": "^3.5"
+	},
+	"autoload": {
+		"exclude-from-classmap": [
+			"**/Database/Migrations/**"
+		]
 	},
 	"autoload-dev": {
 		"psr-4": {
 			"Tests\\Support\\": "tests/_support"
 		}
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/codeigniter4/codeigniter4"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"scripts": {
-		"post-update-cmd": [
-			"@composer dump-autoload"
-		],
+		"analyze": "phpstan analyze",
+		"style": "phpcbf --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ app/",
 		"test": "phpunit"
 	},
 	"support": {

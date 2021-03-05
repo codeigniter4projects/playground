@@ -14,7 +14,11 @@ use Tests\Support\Fakers\MonsterFaker;
  */
 class FakerTest extends \Tests\Support\DatabaseTestCase
 {
-	
+	/**
+	 * @var Fabricator $fabricator
+	 */
+	private $fabricator;
+
 	public function setUp(): void
 	{
 		parent::setUp();

@@ -1,0 +1,24 @@
+parameters:
+	tmpDir: build/phpstan
+	level: 5
+	paths:
+		- app
+		- tests
+	bootstrapFiles:
+		- vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php
+	excludes_analyse:
+		- app/Config/Routes.php
+		- app/Views/*
+	ignoreErrors:
+		- '#Call to an undefined method CodeIgniter\\Database\\ConnectionInterface::(en|dis)ableForeignKeyChecks#'
+		- '#Call to an undefined static method Config\\Services::[a-z]+#'
+		- '#Cannot access property [\$a-z_]+ on (array|object)#'
+	universalObjectCratesClasses:
+		- CodeIgniter\Entity
+		- Faker\Generator
+	scanDirectories:
+		- vendor/codeigniter4/codeigniter4/system/Helpers
+	dynamicConstantNames:
+		- APP_NAMESPACE
+		- CI_DEBUG
+		- ENVIRONMENT
