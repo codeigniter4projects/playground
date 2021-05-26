@@ -10,8 +10,8 @@ parameters:
 		- app/Config/Routes.php
 		- app/Views/*
 	ignoreErrors:
+		- '#Call to an undefined method CodeIgniter\\Database\\BaseBuilder::findAll\(\)#'
 		- '#Call to an undefined method CodeIgniter\\Database\\ConnectionInterface::(en|dis)ableForeignKeyChecks#'
-		- '#Call to an undefined static method Config\\Services::[a-z]+#'
 		- '#Cannot access property [\$a-z_]+ on (array|object)#'
 	universalObjectCratesClasses:
 		- CodeIgniter\Entity
