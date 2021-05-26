@@ -1,7 +1,9 @@
 # Playground
 A space to learn and experience CodeIgniter 4
 
-![PHPUnit](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)
+[![](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4projects/playground/actions?query=workflow%3A%22PHPUnit)
+[![](https://github.com/codeigniter4projects/playground/workflows/PHPStan/badge.svg)](https://github.com/codeigniter4projects/playground/actions?query=workflow%3A%22PHPStan)
+[![Coverage Status](https://coveralls.io/repos/github/codeigniter4projects/playground/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4projects/playground?branch=develop)
 
 This playground is here to help you learn CodeIgniter 4 by example. We try to cover use cases for the most
 common tasks you'll find yourself doing in web applications. Where there are multiple ways to do something,
