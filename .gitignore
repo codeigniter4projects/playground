@@ -51,6 +51,9 @@ Vagrantfile
 writable/cache/*
 !writable/cache/index.html
 
+writable/files/*
+!writable/files/index.html
+
 writable/logs/*
 !writable/logs/index.html
 
@@ -61,30 +64,29 @@ writable/uploads/*
 !writable/uploads/index.html
 
 writable/debugbar/*
+writable/patches/*
+
 writable/database.db
 
 php_errors.log
-
-#-------------------------
-# User Guide Temp Files
-#-------------------------
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+public/error_log
 
 #-------------------------
 # Test Files
 #-------------------------
 tests/coverage*
-
-# Don't save phpunit under version control.
+results/
+build/
+phpunit*.xml
 phpunit
+.phpunit*.cache
+app/Commands/Test.php
 
 #-------------------------
 # Composer
 #-------------------------
 vendor/
+public/assets/vendor/
 
 #-------------------------
 # IDE / Development Files
@@ -122,6 +124,10 @@ nb-configuration.xml
 # Visual Studio Code
 .vscode/
 
-/results/
-/phpunit*.xml
-/.phpunit.*.cache
+#-------------------------
+# Local & Sensitive Files
+#-------------------------
+
+/access
+/local
+/public/local
