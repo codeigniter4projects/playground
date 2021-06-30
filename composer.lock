@@ -2070,16 +2070,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.11.28",
+            "version": "0.11.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "6f309b7ae44667c21efd3935f1a55746914bbc68"
+                "reference": "1ca2c218ed28c40137a6a8700583a2ef7bbc9d0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/6f309b7ae44667c21efd3935f1a55746914bbc68",
-                "reference": "6f309b7ae44667c21efd3935f1a55746914bbc68",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/1ca2c218ed28c40137a6a8700583a2ef7bbc9d0b",
+                "reference": "1ca2c218ed28c40137a6a8700583a2ef7bbc9d0b",
                 "shasum": ""
             },
             "require": {
@@ -2117,7 +2117,7 @@
             "description": "Prefixed and PHP 7.1 downgraded version of rector/rector",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.11.28"
+                "source": "https://github.com/rectorphp/rector/tree/0.11.31"
             },
             "funding": [
                 {
@@ -2125,7 +2125,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-28T09:49:38+00:00"
+            "time": "2021-06-30T16:11:38+00:00"
         },
         {
             "name": "sebastian/cli-parser",
