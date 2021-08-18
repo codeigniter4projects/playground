@@ -11,7 +11,7 @@ class CreatePlaygroundTables extends Migration
 	 * format that fits your style.
 	 *
 	 */
-	public function up()
+	public function up(): void
 	{
 		/**
 		 * Heroes
@@ -72,7 +72,7 @@ class CreatePlaygroundTables extends Migration
 		$this->forge->createTable('dungeons');
 	}
 
-	public function down()
+	public function down(): void
 	{
 		$this->forge->dropTable('heroes');
 		$this->forge->dropTable('dungeons');

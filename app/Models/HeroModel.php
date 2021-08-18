@@ -4,9 +4,18 @@ use CodeIgniter\Model;
 
 class HeroModel extends Model
 {
+	/**
+	 * @var string
+	 */
 	protected $table      = 'heroes';
+	/**
+	 * @var string
+	 */
 	protected $primaryKey = 'id';
 
+	/**
+	 * @var string
+	 */
 	protected $returnType = 'object';
 	protected $useSoftDeletes = true;
 

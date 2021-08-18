@@ -4,7 +4,7 @@ use CodeIgniter\Database\Seeder;
 
 class PlaygroundSeeder extends Seeder
 {
-	public function run()
+	public function run(): void
 	{
 		// Heroes
 		$rows = [

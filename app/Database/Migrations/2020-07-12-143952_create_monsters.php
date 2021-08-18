@@ -4,7 +4,7 @@ use CodeIgniter\Database\Migration;
 
 class CreateMonsters extends Migration
 {
-	public function up()
+	public function up(): void
 	{
 		// We aren't actually going to use foreign keys (see below) but it is a good idea to toggle them in your seeder.
 		$this->db->disableForeignKeyChecks();
@@ -91,7 +91,7 @@ class CreateMonsters extends Migration
 		$this->db->enableForeignKeyChecks();
 	}
 
-	public function down()
+	public function down(): void
 	{
 		$this->db->disableForeignKeyChecks();
 

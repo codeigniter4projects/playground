@@ -4,8 +4,17 @@ use CodeIgniter\Model;
 
 class AbilityModel extends Model
 {
+	/**
+	 * @var string
+	 */
 	protected $table      = 'abilities';
+	/**
+	 * @var string
+	 */
 	protected $primaryKey = 'id';
+	/**
+	 * @var string
+	 */
 	protected $returnType = 'object';
 
 	protected $useTimestamps  = true;

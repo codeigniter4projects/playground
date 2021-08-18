@@ -19,6 +19,9 @@ class Dungeon extends Entity
     // In this case we want integers (not strings)
     // for difficulty and capacity. This allows
     // for strict type checking if needed.
+    /**
+     * @var array<string, string>
+     */
     protected $casts = [
         'difficulty' => 'integer',
         'capacity' => 'integer',
@@ -29,7 +32,7 @@ class Dungeon extends Entity
      * convenience methods made to describe
      * a single instance.
      */
-    public function link()
+    public function link(): string
     {
         return site_url("dungeons/{$this->attributes['id']}");
     }

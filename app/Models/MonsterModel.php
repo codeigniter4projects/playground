@@ -4,8 +4,17 @@ use CodeIgniter\Model;
 
 class MonsterModel extends Model
 {
+	/**
+	 * @var string
+	 */
 	protected $table      = 'monsters';
+	/**
+	 * @var string
+	 */
 	protected $primaryKey = 'id';
+	/**
+	 * @var string
+	 */
 	protected $returnType = 'App\Entities\Monster';
 
 	protected $useTimestamps  = true;
