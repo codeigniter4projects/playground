@@ -1,8 +1,9 @@
 # Playground
 A space to learn and experience CodeIgniter 4
 
-[![](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4projects/playground/actions?query=workflow%3A%22PHPUnit)
-[![](https://github.com/codeigniter4projects/playground/workflows/PHPStan/badge.svg)](https://github.com/codeigniter4projects/playground/actions?query=workflow%3A%22PHPStan)
+[![](https://github.com/codeigniter4projects/playground/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4projects/playground/actions/workflows/test.yml)
+[![](https://github.com/codeigniter4projects/playground/workflows/PHPStan/badge.svg)](https://github.com/codeigniter4projects/playground/actions/workflows/analyze.yml)
+[![](https://github.com/codeigniter4projects/playground/workflows/Deptrac/badge.svg)](https://github.com/codeigniter4projects/playground/actions/workflows/inspect.yml)
 [![Coverage Status](https://coveralls.io/repos/github/codeigniter4projects/playground/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4projects/playground?branch=develop)
 
 This playground is here to help you learn CodeIgniter 4 by example. We try to cover use cases for the most
