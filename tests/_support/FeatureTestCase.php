@@ -2,12 +2,14 @@
 
 namespace Tests\Support;
 
+use CodeIgniter\Test\FeatureTestTrait;
+
 /**
  * @internal
  */
-final class FeatureTestCase extends DatabaseTestCase
+abstract class FeatureTestCase extends DatabaseTestCase
 {
-    use \CodeIgniter\Test\FeatureTestTrait;
+    use FeatureTestTrait;
 
     /**
      * If present, will override application

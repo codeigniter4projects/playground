@@ -125,9 +125,10 @@
 			<!-- Server -->
 			<div class="content" id="server">
 				<?php foreach (['_SERVER', '_SESSION'] as $var) : ?>
-					<?php if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
-                                            continue;
-                                        } ?>
+					<?php
+                    if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
+                        continue;
+                    } ?>
 
 					<h3>$<?= esc($var) ?></h3>
 
@@ -227,9 +228,10 @@
 
 				<?php $empty = true; ?>
 				<?php foreach (['_GET', '_POST', '_COOKIE'] as $var) : ?>
-					<?php if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
-                                            continue;
-                                        } ?>
+					<?php
+                    if (empty($GLOBALS[$var]) || ! is_array($GLOBALS[$var])) {
+                        continue;
+                    } ?>
 
 					<?php $empty = false; ?>
 
@@ -282,12 +284,14 @@
 						</thead>
 						<tbody>
 						<?php foreach ($headers as $value) : ?>
-							<?php if (empty($value)) {
-                                            continue;
-                                        } ?>
-							<?php if (! is_array($value)) {
-                                            $value = [$value];
-                                        } ?>
+							<?php
+                            if (empty($value)) {
+                                continue;
+                            }
+
+                            if (! is_array($value)) {
+                                $value = [$value];
+                            } ?>
 							<?php foreach ($value as $h) : ?>
 								<tr>
 									<td><?= esc($h->getName(), 'html') ?></td>

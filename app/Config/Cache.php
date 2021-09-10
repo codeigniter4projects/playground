@@ -84,6 +84,35 @@ class Cache extends BaseConfig
 
     /**
      * --------------------------------------------------------------------------
+     * Default TTL
+     * --------------------------------------------------------------------------
+     *
+     * The default number of seconds to save items when none is specified.
+     *
+     * WARNING: This is not used by framework handlers where 60 seconds is
+     * hard-coded, but may be useful to projects and modules. This will replace
+     * the hard-coded value in a future release.
+     *
+     * @var int
+     */
+    public $ttl = 60;
+
+    /**
+     * --------------------------------------------------------------------------
+     * Reserved Characters
+     * --------------------------------------------------------------------------
+     *
+     * A string of reserved characters that will not be allowed in keys or tags.
+     * Strings that violate this restriction will cause handlers to throw.
+     * Default: {}()/\@:
+     * Note: The default set is required for PSR-6 compliance.
+     *
+     * @var string
+     */
+    public $reservedCharacters = '{}()/\@:';
+
+    /**
+     * --------------------------------------------------------------------------
      * File settings
      * --------------------------------------------------------------------------
      * Your file storage preferences can be specified below, if you are using
