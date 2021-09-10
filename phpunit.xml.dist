@@ -13,7 +13,7 @@
 		executionOrder="random"
 		failOnRisky="true"
 		failOnWarning="true"
-		stopOnError="true"
+		stopOnError="false"
 		stopOnFailure="false"
 		stopOnIncomplete="false"
 		stopOnSkipped="false"
