@@ -11,60 +11,61 @@ use Tests\Support\Fakers\MonsterFaker;
  * folder that contains the `fake()` method. This test shows off some
  * of the ways you might use CodeIgniter's Fabricator to create and test
  * different scenarios.
+ *
+ * @internal
  */
-class FakerTest extends \Tests\Support\DatabaseTestCase
+final class FakerTest extends \Tests\Support\DatabaseTestCase
 {
-	/**
-	 * @var Fabricator $fabricator
-	 */
-	private $fabricator;
+    /**
+     * @var Fabricator
+     */
+    private $fabricator;
 
-	public function setUp(): void
-	{
-		parent::setUp();
+    protected function setUp(): void
+    {
+        parent::setUp();
 
-		// Get an instance of Fabricator ready to use our Faker
-		$this->fabricator = new Fabricator(MonsterFaker::class);
+        // Get an instance of Fabricator ready to use our Faker
+        $this->fabricator = new Fabricator(MonsterFaker::class);
 
-		// Let Fabricator know about the dungeons we already created in PlaygroundSeeder
-		Fabricator::setCount('dungeons', 3);
-	}
+        // Let Fabricator know about the dungeons we already created in PlaygroundSeeder
+        Fabricator::setCount('dungeons', 3);
+    }
 
-	// Ensure that our Faker is returning a valid Monster
-	public function testMakesValidMonster()
-	{
-		// We can use make() to generate a random dataset defined in our Faker
-		$monster = $this->fabricator->make();
+    // Ensure that our Faker is returning a valid Monster
+    public function testMakesValidMonster()
+    {
+        // We can use make() to generate a random dataset defined in our Faker
+        $monster = $this->fabricator->make();
 
-		$this->assertInstanceOf(Monster::class, $monster);
-		$this->assertGreaterThanOrEqual(1, $monster->health);
-		
-	}
+        $this->assertInstanceOf(Monster::class, $monster);
+        $this->assertGreaterThanOrEqual(1, $monster->health);
+    }
 
-	// Since our Faker uses Fabricator counts for its dungeon_id we should always have a valid dungeon available
-	public function testMakesMonsterWithDungeon()
-	{
-		$monster = $this->fabricator->make();
-		$dungeon = model(DungeonModel::class)->find($monster->dungeon_id);
+    // Since our Faker uses Fabricator counts for its dungeon_id we should always have a valid dungeon available
+    public function testMakesMonsterWithDungeon()
+    {
+        $monster = $this->fabricator->make();
+        $dungeon = model(DungeonModel::class)->find($monster->dungeon_id);
 
-		$this->assertInstanceOf(Dungeon::class, $dungeon);				
-	}
+        $this->assertInstanceOf(Dungeon::class, $dungeon);
+    }
 
-	public function testCreateAddsToDatabase()
-	{
-		// create() generates a random dataset just like make() but also adds it to the database for us
-		$monster = $this->fabricator->create();
-		$this->assertIsInt($monster->id);
+    public function testCreateAddsToDatabase()
+    {
+        // create() generates a random dataset just like make() but also adds it to the database for us
+        $monster = $this->fabricator->create();
+        $this->assertIsInt($monster->id);
 
-		$this->seeInDatabase('monsters', ['id' => $monster->id]);
-	}
+        $this->seeInDatabase('monsters', ['id' => $monster->id]);
+    }
 
-	public function testHelperUsesFaker()
-	{
-		// test_helper comes with the fake() method that does the same as above without all the set up
-		$monster = fake(MonsterFaker::class);
-		$this->assertIsInt($monster->id);
+    public function testHelperUsesFaker()
+    {
+        // test_helper comes with the fake() method that does the same as above without all the set up
+        $monster = fake(MonsterFaker::class);
+        $this->assertIsInt($monster->id);
 
-		$this->seeInDatabase('monsters', ['id' => $monster->id]);
-	}
+        $this->seeInDatabase('monsters', ['id' => $monster->id]);
+    }
 }

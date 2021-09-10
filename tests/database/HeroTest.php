@@ -1,29 +1,32 @@
 <?php
 
-class HeroTest extends \Tests\Support\DatabaseTestCase
+/**
+ * @internal
+ */
+final class HeroTest extends \Tests\Support\DatabaseTestCase
 {
-	public function setUp(): void
-	{
-		parent::setUp();
-	}
+    protected function setUp(): void
+    {
+        parent::setUp();
+    }
 
-	public function testHasHero()
-	{
-		$hero = [
-			'name'    => 'Ursula Frost',
-			'pronoun' => 'she',
-		];
-		
-		$this->seeInDatabase('heroes', $hero);
-	}
+    public function testHasHero()
+    {
+        $hero = [
+            'name'    => 'Ursula Frost',
+            'pronoun' => 'she',
+        ];
 
-	public function testModelFindHero()
-	{
-		$model = new \App\Models\HeroModel();
+        $this->seeInDatabase('heroes', $hero);
+    }
 
-		$hero = $model->find(1);
+    public function testModelFindHero()
+    {
+        $model = new \App\Models\HeroModel();
 
-		$this->assertIsObject($hero);
-		$this->assertEquals('Hallam Swales', $hero->name);
-	}
+        $hero = $model->find(1);
+
+        $this->assertIsObject($hero);
+        $this->assertSame('Hallam Swales', $hero->name);
+    }
 }

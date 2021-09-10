@@ -9,8 +9,6 @@ use CodeIgniter\Entity;
  *
  * This class represents a single row in the
  * `dungeons` database.
- *
- * @package App\Entities
  */
 class Dungeon extends Entity
 {
@@ -24,7 +22,7 @@ class Dungeon extends Entity
      */
     protected $casts = [
         'difficulty' => 'integer',
-        'capacity' => 'integer',
+        'capacity'   => 'integer',
     ];
 
     /**

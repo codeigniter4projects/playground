@@ -1,8 +1,11 @@
 <?php
 
-class HomeTest extends \Tests\Support\FeatureTestCase
+/**
+ * @internal
+ */
+final class HomeTest extends \Tests\Support\FeatureTestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
     }

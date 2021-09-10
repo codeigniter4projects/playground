@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * CodeIgniter
  *
@@ -29,11 +28,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @package    CodeIgniter
- * @author     CodeIgniter Dev Team
  * @copyright  2019-2020 CodeIgniter Foundation
  * @license    https://opensource.org/licenses/MIT	MIT License
- * @link       https://codeigniter.com
+ *
+ * @see       https://codeigniter.com
  * @since      Version 4.0.0
  * @filesource
  */
@@ -49,7 +47,7 @@ namespace Tests\Support\Libraries;
  */
 class ConfigReader extends \Config\App
 {
-	public function __construct()
-	{
-	}
+    public function __construct()
+    {
+    }
 }
