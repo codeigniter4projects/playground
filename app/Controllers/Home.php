@@ -7,7 +7,7 @@ use App\Models\HeroModel;
 
 class Home extends BaseController
 {
-	public function index()
+	public function index(): string
 	{
          // When you don't need to use a model in multiple places
          // you can simply get a new instance here. It will use

@@ -4,13 +4,22 @@ use CodeIgniter\Model;
 
 class DungeonModel extends Model
 {
+	/**
+	 * @var string
+	 */
 	protected $table      = 'dungeons';
+	/**
+	 * @var string
+	 */
 	protected $primaryKey = 'id';
 
 	// We are specifying an Entity class to return
 	// here instead of a simple array or object.
 	// You don't have to extend CI's Entity class, though,
 	// any class can be used.
+	/**
+	 * @var string
+	 */
 	protected $returnType = 'App\Entities\Dungeon';
 	protected $useSoftDeletes = false;
 

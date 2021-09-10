@@ -12,6 +12,9 @@ use CodeIgniter\Entity;
  */
 class Monster extends Entity
 {
+	/**
+	 * @var array<string, string>
+	 */
 	protected $casts = [
 		'health'     => 'integer',
 		'dungeon_id' => 'integer',
