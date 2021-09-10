@@ -18,7 +18,8 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
-        "codeigniter4/codeigniter4": "dev-develop"
+        "codeigniter4/codeigniter4": "dev-develop",
+        "tatter/patches": "^2.0"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.1",
