@@ -27,7 +27,7 @@
             <p>Page rendered in {elapsed_time} seconds.</p>
         </div>
         <div class="col">
-            <p class="text-center">PHP <?= phpversion() ?></p>
+            <p class="text-center">PHP <?= PHP_VERSION ?></p>
         </div>
         <div class="col">
             <p class="text-right">Environment: <?= ENVIRONMENT ?></p>

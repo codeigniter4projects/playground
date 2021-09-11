@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e7c56e369e96c1d4a66742dd2dd7026",
+    "content-hash": "f26a0b9758a4c7d971cda83344a32738",
     "packages": [
         {
             "name": "codeigniter4/codeigniter4",
@@ -277,6 +277,65 @@
                 "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
             "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "tatter/patches",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattersoftware/codeigniter4-patches.git",
+                "reference": "8401b5f5cc4acd8c15a41e5e5b3cadf650a72d42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattersoftware/codeigniter4-patches/zipball/8401b5f5cc4acd8c15a41e5e5b3cadf650a72d42",
+                "reference": "8401b5f5cc4acd8c15a41e5e5b3cadf650a72d42",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0"
+            },
+            "bin": [
+                "src/patch"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Gatner",
+                    "email": "mgatner@tattersoftware.com",
+                    "homepage": "https://tattersoftware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Automated project updates for CodeIgniter 4",
+            "homepage": "https://github.com/tattersoftware/codeigniter4-patches",
+            "keywords": [
+                "automatic",
+                "autoupdate",
+                "codeigniter",
+                "codeigniter4",
+                "patches",
+                "update"
+            ],
+            "support": {
+                "issues": "https://github.com/tattersoftware/codeigniter4-patches/issues",
+                "source": "https://github.com/tattersoftware/codeigniter4-patches/tree/v2.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/tatter",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tattersoftware",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-06-10T19:03:37+00:00"
         }
     ],
     "packages-dev": [

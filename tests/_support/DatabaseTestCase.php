@@ -1,51 +1,61 @@
-<?php namespace Tests\Support;
+<?php
 
-class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
+namespace Tests\Support;
+
+use CodeIgniter\Test\CIUnitTestCase;
+use CodeIgniter\Test\DatabaseTestTrait;
+
+/**
+ * @internal
+ */
+abstract class DatabaseTestCase extends CIUnitTestCase
 {
-	/**
-	 * Should the database be refreshed before each test?
-	 *
-	 * @var boolean
-	 */
-	protected $refresh = true;
+    use DatabaseTestTrait;
 
-	/**
-	 * The seed file(s) used for all tests within this test case.
-	 * Should be fully-namespaced or relative to $basePath
-	 *
-	 * @var string|array
-	 */
+    /**
+     * Should the database be refreshed before each test?
+     *
+     * @var bool
+     */
+    protected $refresh = true;
+
+    /**
+     * The seed file(s) used for all tests within this test case.
+     * Should be fully-namespaced or relative to $basePath
+     *
+     * @var array|string
+     */
     protected $seed = 'App\Database\Seeds\PlaygroundSeeder';
 
-	/**
-	 * The path to the seeds directory.
-	 * Allows overriding the default application directories.
-	 *
-	 * @var string
-	 */
+    /**
+     * The path to the seeds directory.
+     * Allows overriding the default application directories.
+     *
+     * @var string
+     */
     protected $basePath = APPPATH . 'Database/';
 
-	/**
-	 * The namespace(s) to help us find the migration classes.
-	 * Empty is equivalent to running `spark migrate -all`.
-	 * Note that running "all" runs migrations in date order,
-	 * but specifying namespaces runs them in namespace order (then date)
-	 *
-	 * @var string|array|null
-	 */
+    /**
+     * The namespace(s) to help us find the migration classes.
+     * Empty is equivalent to running `spark migrate -all`.
+     * Note that running "all" runs migrations in date order,
+     * but specifying namespaces runs them in namespace order (then date)
+     *
+     * @var array|string|null
+     */
     protected $namespace = 'App';
 
-	public function setUp(): void
-	{
-		parent::setUp();
+    protected function setUp(): void
+    {
+        parent::setUp();
 
-		// Extra code to run before each test
-	}
+        // Extra code to run before each test
+    }
 
-	public function tearDown(): void
-	{
-		parent::tearDown();
+    protected function tearDown(): void
+    {
+        parent::tearDown();
 
-		// Extra code to run after each test
-	}
+        // Extra code to run after each test
+    }
 }

@@ -1,4 +1,6 @@
-<?php namespace Tests\Support\Fakers;
+<?php
+
+namespace Tests\Support\Fakers;
 
 use App\Entities\Monster;
 use App\Models\MonsterModel;
@@ -14,26 +16,22 @@ use Faker\Generator;
  */
 class MonsterFaker extends MonsterModel implements FabricatorModel
 {
-	/**
-	 * Faked data for Fabricator.
-	 *
-	 * @param Generator $faker
-	 *
-	 * @return Monster
-	 */
-	public function fake(Generator &$faker): Monster
-	{
-		return new Monster([
-			'name'       => $faker->lastName,
-			'health'     => rand(1, 50),
+    /**
+     * Faked data for Fabricator.
+     */
+    public function fake(Generator &$faker): Monster
+    {
+        return new Monster([
+            'name'   => $faker->lastName,
+            'health' => mt_rand(1, 50),
 
-			/**
-			 * This is a special function of Fabricator that means "get how many items
-			 * have been generated for this table so far". It is handy for faking
-			 * related items, like the number of possible dungeons. But if none have
-			 * been made we will just pick a number.
-			 */
-			'dungeon_id' => rand(1, Fabricator::getCount('dungeons') ?: 3),
-		]);
-	}
+            /**
+             * This is a special function of Fabricator that means "get how many items
+             * have been generated for this table so far". It is handy for faking
+             * related items, like the number of possible dungeons. But if none have
+             * been made we will just pick a number.
+             */
+            'dungeon_id' => mt_rand(1, Fabricator::getCount('dungeons') ?: 3),
+        ]);
+    }
 }
