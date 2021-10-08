@@ -1259,16 +1259,16 @@
         },
         {
             "name": "nexusphp/cs-config",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NexusPHP/cs-config.git",
-                "reference": "0b63190f1bd0ce0def6d6763d261dc3d3733b220"
+                "reference": "cb1d7685096ca4d4366236864d37e647ec21d3e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/0b63190f1bd0ce0def6d6763d261dc3d3733b220",
-                "reference": "0b63190f1bd0ce0def6d6763d261dc3d3733b220",
+                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/cb1d7685096ca4d4366236864d37e647ec21d3e4",
+                "reference": "cb1d7685096ca4d4366236864d37e647ec21d3e4",
                 "shasum": ""
             },
             "require": {
@@ -1317,7 +1317,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-09-08T13:36:36+00:00"
+            "time": "2021-10-06T06:25:21+00:00"
         },
         {
             "name": "nexusphp/tachycardia",
