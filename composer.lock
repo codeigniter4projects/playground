@@ -341,21 +341,21 @@
     "packages-dev": [
         {
             "name": "codeigniter/coding-standard",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodeIgniter/coding-standard.git",
-                "reference": "32563dfc7dfa824e489adcabc4d5b0ebf7933f50"
+                "reference": "f79b0009c9fb894e8725eccdde136671eb516c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/32563dfc7dfa824e489adcabc4d5b0ebf7933f50",
-                "reference": "32563dfc7dfa824e489adcabc4d5b0ebf7933f50",
+                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/f79b0009c9fb894e8725eccdde136671eb516c2c",
+                "reference": "f79b0009c9fb894e8725eccdde136671eb516c2c",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.1",
+                "friendsofphp/php-cs-fixer": "^3.2",
                 "nexusphp/cs-config": "^3.3",
                 "php": "^7.3 || ^8.0"
             },
@@ -387,7 +387,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/CodeIgniter/coding-standard"
             },
-            "time": "2021-08-31T13:58:29+00:00"
+            "time": "2021-10-18T14:26:57+00:00"
         },
         {
             "name": "composer/semver",
