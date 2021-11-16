@@ -10,10 +10,12 @@ class AbilityModel extends Model
      * @var string
      */
     protected $table = 'abilities';
+
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+
     /**
      * @var string
      */
@@ -22,11 +24,13 @@ class AbilityModel extends Model
     /**
      * @var bool
      */
-    protected $useTimestamps  = true;
+    protected $useTimestamps = true;
+
     /**
      * @var bool
      */
     protected $useSoftDeletes = false;
+
     /**
      * @var bool
      */
@@ -35,7 +39,8 @@ class AbilityModel extends Model
     /**
      * @var string[]
      */
-    protected $allowedFields   = ['name', 'damage', 'cooldown'];
+    protected $allowedFields = ['name', 'damage', 'cooldown'];
+
     /**
      * @var array<string, string>
      */

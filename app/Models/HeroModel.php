@@ -10,6 +10,7 @@ class HeroModel extends Model
      * @var string
      */
     protected $table = 'heroes';
+
     /**
      * @var string
      */
@@ -18,7 +19,8 @@ class HeroModel extends Model
     /**
      * @var string
      */
-    protected $returnType     = 'object';
+    protected $returnType = 'object';
+
     /**
      * @var bool
      */
@@ -41,12 +43,14 @@ class HeroModel extends Model
         'name'  => 'required|min_length[2]',
         'level' => 'is_natural_no_zero',
     ];
+
     /**
      * @var mixed[]
      */
     protected $validationMessages = [];
+
     /**
      * @var bool
      */
-    protected $skipValidation     = false;
+    protected $skipValidation = false;
 }

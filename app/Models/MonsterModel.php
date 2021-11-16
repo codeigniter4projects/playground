@@ -10,10 +10,12 @@ class MonsterModel extends Model
      * @var string
      */
     protected $table = 'monsters';
+
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+
     /**
      * @var string
      */
@@ -22,11 +24,13 @@ class MonsterModel extends Model
     /**
      * @var bool
      */
-    protected $useTimestamps  = true;
+    protected $useTimestamps = true;
+
     /**
      * @var bool
      */
     protected $useSoftDeletes = true;
+
     /**
      * @var bool
      */
@@ -35,7 +39,8 @@ class MonsterModel extends Model
     /**
      * @var string[]
      */
-    protected $allowedFields   = ['name', 'health', 'dungeon_id'];
+    protected $allowedFields = ['name', 'health', 'dungeon_id'];
+
     /**
      * @var array<string, string>
      */
@@ -44,6 +49,7 @@ class MonsterModel extends Model
         'health'     => 'is_natural',
         'dungeon_id' => 'is_natural_no_zero',
     ];
+
     /**
      * @var mixed[]
      */

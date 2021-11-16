@@ -10,6 +10,7 @@ class DungeonModel extends Model
      * @var string
      */
     protected $table = 'dungeons';
+
     /**
      * @var string
      */
@@ -22,7 +23,8 @@ class DungeonModel extends Model
     /**
      * @var string
      */
-    protected $returnType     = 'App\Entities\Dungeon';
+    protected $returnType = 'App\Entities\Dungeon';
+
     /**
      * @var bool
      */
@@ -46,14 +48,16 @@ class DungeonModel extends Model
         'difficulty' => 'is_natural_no_zero',
         'capacity'   => 'is_natural_no_zero',
     ];
+
     /**
      * @var mixed[]
      */
     protected $validationMessages = [];
+
     /**
      * @var bool
      */
-    protected $skipValidation     = false;
+    protected $skipValidation = false;
 
     /**
      * Help! Dungeons have monsters in them, but we have no way of knowing
