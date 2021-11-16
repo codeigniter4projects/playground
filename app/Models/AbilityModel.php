@@ -10,20 +10,40 @@ class AbilityModel extends Model
      * @var string
      */
     protected $table = 'abilities';
+
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+
     /**
      * @var string
      */
     protected $returnType = 'object';
 
-    protected $useTimestamps  = true;
+    /**
+     * @var bool
+     */
+    protected $useTimestamps = true;
+
+    /**
+     * @var bool
+     */
     protected $useSoftDeletes = false;
+
+    /**
+     * @var bool
+     */
     protected $skipValidation = false;
 
-    protected $allowedFields   = ['name', 'damage', 'cooldown'];
+    /**
+     * @var string[]
+     */
+    protected $allowedFields = ['name', 'damage', 'cooldown'];
+
+    /**
+     * @var array<string, string>
+     */
     protected $validationRules = [
         'name'     => 'required|min_length[2]',
         'damage'   => 'is_natural',

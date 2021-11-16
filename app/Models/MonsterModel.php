@@ -10,24 +10,48 @@ class MonsterModel extends Model
      * @var string
      */
     protected $table = 'monsters';
+
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+
     /**
      * @var string
      */
     protected $returnType = 'App\Entities\Monster';
 
-    protected $useTimestamps  = true;
+    /**
+     * @var bool
+     */
+    protected $useTimestamps = true;
+
+    /**
+     * @var bool
+     */
     protected $useSoftDeletes = true;
+
+    /**
+     * @var bool
+     */
     protected $skipValidation = false;
 
-    protected $allowedFields   = ['name', 'health', 'dungeon_id'];
+    /**
+     * @var string[]
+     */
+    protected $allowedFields = ['name', 'health', 'dungeon_id'];
+
+    /**
+     * @var array<string, string>
+     */
     protected $validationRules = [
         'name'       => 'required|min_length[2]',
         'health'     => 'is_natural',
         'dungeon_id' => 'is_natural_no_zero',
     ];
+
+    /**
+     * @var mixed[]
+     */
     protected $validationMessages = [];
 }

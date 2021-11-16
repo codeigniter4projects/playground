@@ -12,18 +12,22 @@ class DungeonsList extends BaseCommand
      * @var string
      */
     protected $group = 'Playground';
+
     /**
      * @var string
      */
     protected $name = 'dungeons:list';
+
     /**
      * @var string
      */
     protected $description = 'List all dungeons by difficulty';
+
     /**
      * @var string
      */
     protected $usage = 'dungeons:list';
+
     /**
      * @var mixed[]
      */
