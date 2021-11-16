@@ -19,11 +19,26 @@ class AbilityModel extends Model
      */
     protected $returnType = 'object';
 
+    /**
+     * @var bool
+     */
     protected $useTimestamps  = true;
+    /**
+     * @var bool
+     */
     protected $useSoftDeletes = false;
+    /**
+     * @var bool
+     */
     protected $skipValidation = false;
 
+    /**
+     * @var string[]
+     */
     protected $allowedFields   = ['name', 'damage', 'cooldown'];
+    /**
+     * @var array<string, string>
+     */
     protected $validationRules = [
         'name'     => 'required|min_length[2]',
         'damage'   => 'is_natural',

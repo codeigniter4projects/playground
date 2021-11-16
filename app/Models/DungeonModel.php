@@ -23,18 +23,36 @@ class DungeonModel extends Model
      * @var string
      */
     protected $returnType     = 'App\Entities\Dungeon';
+    /**
+     * @var bool
+     */
     protected $useSoftDeletes = false;
 
+    /**
+     * @var string[]
+     */
     protected $allowedFields = ['name', 'difficulty', 'capacity'];
 
+    /**
+     * @var bool
+     */
     protected $useTimestamps = true;
 
+    /**
+     * @var array<string, string>
+     */
     protected $validationRules = [
         'name'       => 'required|min_length[2]',
         'difficulty' => 'is_natural_no_zero',
         'capacity'   => 'is_natural_no_zero',
     ];
+    /**
+     * @var mixed[]
+     */
     protected $validationMessages = [];
+    /**
+     * @var bool
+     */
     protected $skipValidation     = false;
 
     /**

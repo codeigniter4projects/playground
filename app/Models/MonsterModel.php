@@ -19,15 +19,33 @@ class MonsterModel extends Model
      */
     protected $returnType = 'App\Entities\Monster';
 
+    /**
+     * @var bool
+     */
     protected $useTimestamps  = true;
+    /**
+     * @var bool
+     */
     protected $useSoftDeletes = true;
+    /**
+     * @var bool
+     */
     protected $skipValidation = false;
 
+    /**
+     * @var string[]
+     */
     protected $allowedFields   = ['name', 'health', 'dungeon_id'];
+    /**
+     * @var array<string, string>
+     */
     protected $validationRules = [
         'name'       => 'required|min_length[2]',
         'health'     => 'is_natural',
         'dungeon_id' => 'is_natural_no_zero',
     ];
+    /**
+     * @var mixed[]
+     */
     protected $validationMessages = [];
 }
