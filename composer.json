@@ -18,8 +18,7 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
-        "codeigniter4/codeigniter4": "dev-develop",
-        "tatter/patches": "^2.0"
+        "codeigniter4/codeigniter4": "dev-develop"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.1",
@@ -29,9 +28,10 @@
         "nexusphp/cs-config": "^3.1",
         "nexusphp/tachycardia": "^1.0",
         "php-coveralls/php-coveralls": "^2.4",
-        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan": "^1.1",
         "phpunit/phpunit": "^9.0",
-        "rector/rector": "^0.11"
+        "psr/container": "^1.0",
+        "rector/rector": "^0.12"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -58,13 +58,13 @@
             "@deduplicate",
             "@analyze",
             "@test",
-            "@mutate",
             "@inspect",
             "@style"
         ],
         "deduplicate": "phpcpd app/ src/",
         "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
         "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+        "patch": "patch",
         "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
         "test": "phpunit"
     },
