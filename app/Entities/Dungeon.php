@@ -2,7 +2,7 @@
 
 namespace App\Entities;
 
-use CodeIgniter\Entity;
+use CodeIgniter\Entity\Entity;
 
 /**
  * Class Dungeon

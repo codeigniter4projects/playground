@@ -17,7 +17,7 @@ return static function (RectorConfig $rectorConfig): void {
 
     // do you need to include constants, class aliases or custom autoloader? files listed will be executed
     $rectorConfig->bootstrapFiles([
-        __DIR__ . '/vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php',
+        __DIR__ . '/vendor/codeigniter4/framework/system/Test/bootstrap.php',
     ]);
 
     // is there a file you need to skip?

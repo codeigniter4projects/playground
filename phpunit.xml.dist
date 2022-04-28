@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
-		bootstrap="vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php"
+		xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+		bootstrap="vendor/codeigniter4/framework/system/Test/bootstrap.php"
 		backupGlobals="false"
 		beStrictAboutCoversAnnotation="true"
 		beStrictAboutOutputDuringTests="true"
@@ -21,7 +21,7 @@
 
 	<coverage includeUncoveredFiles="true" processUncoveredFiles="true">
 		<include>
-			<directory suffix=".php">./app</directory>
+			<directory suffix=".php">./app/</directory>
 		</include>
 		<exclude>
 			<directory suffix=".php">./app/Config</directory>
@@ -37,7 +37,7 @@
 	</coverage>
 
 	<testsuites>
-		<testsuite name="app">
+		<testsuite name="main">
 			<directory>./tests</directory>
 		</testsuite>
 	</testsuites>
@@ -74,7 +74,7 @@
 
 	<php>
 		<env name="XDEBUG_MODE" value="coverage"/>
-		<server name="app.baseURL" value="http://example.com"/>
+		<server name="app.baseURL" value="https://example.com/"/>
 
 		<!-- Directory containing phpunit.xml -->
 		<const name="HOMEPATH" value="./"/>
