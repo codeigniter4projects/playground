@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Entities\Dungeon;
 use CodeIgniter\Model;
 
 class DungeonModel extends Model
@@ -23,7 +24,7 @@ class DungeonModel extends Model
     /**
      * @var string
      */
-    protected $returnType = 'App\Entities\Dungeon';
+    protected $returnType = Dungeon::class;
 
     /**
      * @var bool
