@@ -1,6 +1,6 @@
 paths:
-  - ./app
-  - ./vendor/codeigniter4/codeigniter4/system
+  - ./app/
+  - ./vendor/codeigniter4/framework/system/
 exclude_files:
   - '#.*test.*#i'
 layers:

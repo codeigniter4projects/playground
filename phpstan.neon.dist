@@ -2,10 +2,10 @@ parameters:
 	tmpDir: build/phpstan
 	level: 5
 	paths:
-		- app
-		- tests
+		- app/
+		- tests/
 	bootstrapFiles:
-		- vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php
+		- vendor/codeigniter4/framework/system/Test/bootstrap.php
 	excludePaths:
 		- app/Config/Routes.php
 		- app/Views/*
@@ -18,7 +18,7 @@ parameters:
 		- CodeIgniter\Entity\Entity
 		- Faker\Generator
 	scanDirectories:
-		- vendor/codeigniter4/codeigniter4/system/Helpers
+		- vendor/codeigniter4/framework/system/Helpers
 	dynamicConstantNames:
 		- APP_NAMESPACE
 		- CI_DEBUG
