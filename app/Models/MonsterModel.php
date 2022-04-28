@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Entities\Monster;
 use CodeIgniter\Model;
 
 class MonsterModel extends Model
@@ -19,7 +20,7 @@ class MonsterModel extends Model
     /**
      * @var string
      */
-    protected $returnType = 'App\Entities\Monster';
+    protected $returnType = Monster::class;
 
     /**
      * @var bool
