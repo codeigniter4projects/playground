@@ -58,8 +58,6 @@ return static function (RectorConfig $rectorConfig): void {
         $rectorConfig->phpstanConfig(__DIR__ . '/phpstan.neon.dist');
     }
 
-    // Set the target version for refactoring
-    $rectorConfig->phpVersion(PhpVersion::PHP_74);
 
     // Auto-import fully qualified class names
     $rectorConfig->importNames();
