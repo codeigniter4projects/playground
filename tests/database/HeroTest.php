@@ -1,9 +1,12 @@
 <?php
 
+use App\Models\HeroModel;
+use Tests\Support\DatabaseTestCase;
+
 /**
  * @internal
  */
-final class HeroTest extends \Tests\Support\DatabaseTestCase
+final class HeroTest extends DatabaseTestCase
 {
     protected function setUp(): void
     {
@@ -22,7 +25,7 @@ final class HeroTest extends \Tests\Support\DatabaseTestCase
 
     public function testModelFindHero()
     {
-        $model = new \App\Models\HeroModel();
+        $model = new HeroModel();
 
         $hero = $model->find(1);
 

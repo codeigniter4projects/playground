@@ -64,6 +64,8 @@ return static function (RectorConfig $rectorConfig): void {
 
     // Are there files or rules you need to skip?
     $rectorConfig->skip([
+        __DIR__ . '/app/Config/Pager.php',
+        __DIR__ . '/app/Config/Validation.php',
         __DIR__ . '/app/Views',
 
         JsonThrowOnErrorRector::class,
@@ -113,6 +115,6 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(TypedPropertyRector::class, [
             // Set to false if you use in libraries, or it does create breaking changes.
-            TypedPropertyRector::INLINE_PUBLIC => true,
+            TypedPropertyRector::INLINE_PUBLIC => false,
         ]);
 };
