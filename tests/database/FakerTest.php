@@ -4,6 +4,7 @@ use App\Entities\Dungeon;
 use App\Entities\Monster;
 use App\Models\DungeonModel;
 use CodeIgniter\Test\Fabricator;
+use Tests\Support\DatabaseTestCase;
 use Tests\Support\Fakers\MonsterFaker;
 
 /**
@@ -14,12 +15,9 @@ use Tests\Support\Fakers\MonsterFaker;
  *
  * @internal
  */
-final class FakerTest extends \Tests\Support\DatabaseTestCase
+final class FakerTest extends DatabaseTestCase
 {
-    /**
-     * @var Fabricator
-     */
-    private $fabricator;
+    private Fabricator $fabricator;
 
     protected function setUp(): void
     {

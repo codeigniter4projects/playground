@@ -2,6 +2,7 @@
 
 namespace Tests\Support;
 
+use CodeIgniter\Router\RouteCollection;
 use CodeIgniter\Test\FeatureTestTrait;
 
 /**
@@ -15,7 +16,7 @@ abstract class FeatureTestCase extends DatabaseTestCase
      * If present, will override application
      * routes when using call().
      *
-     * @var \CodeIgniter\Router\RouteCollection
+     * @var RouteCollection
      */
     protected $routes;
 
