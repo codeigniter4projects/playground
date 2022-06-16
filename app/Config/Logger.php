@@ -3,6 +3,7 @@
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
+use CodeIgniter\Log\Handlers\FileHandler;
 
 class Logger extends BaseConfig
 {
@@ -83,7 +84,7 @@ class Logger extends BaseConfig
          * File Handler
          * --------------------------------------------------------------------
          */
-        'CodeIgniter\Log\Handlers\FileHandler' => [
+        FileHandler::class => [
 
             // The log levels that this handler will handle.
             'handles' => [

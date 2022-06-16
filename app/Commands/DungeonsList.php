@@ -35,7 +35,8 @@ class DungeonsList extends BaseCommand
 
     public function run(array $params = []): void
     {
-        $row = (new DungeonModel())
+        $row = model(DungeonModel::class)
+            ->builder()
             ->select('id, name, difficulty, capacity')
             ->orderBy('difficulty', 'desc')
             ->get()->getResultArray();
