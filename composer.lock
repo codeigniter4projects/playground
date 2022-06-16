@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "codeigniter4/framework",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "29f0e9eb2442eba41f4e9832b6695c7584e096e0"
+                "reference": "f65a2cff3a572c58c8ab9c8f61bdba904362b549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/29f0e9eb2442eba41f4e9832b6695c7584e096e0",
-                "reference": "29f0e9eb2442eba41f4e9832b6695c7584e096e0",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/f65a2cff3a572c58c8ab9c8f61bdba904362b549",
+                "reference": "f65a2cff3a572c58c8ab9c8f61bdba904362b549",
                 "shasum": ""
             },
             "require": {
@@ -37,7 +37,7 @@
                 "mikey179/vfsstream": "^1.6",
                 "nexusphp/cs-config": "^3.3",
                 "phpunit/phpunit": "^9.1",
-                "predis/predis": "^1.1"
+                "predis/predis": "^1.1 || ^2.0"
             },
             "suggest": {
                 "ext-fileinfo": "Improves mime type detection for files"
@@ -62,7 +62,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2022-06-03T14:04:14+00:00"
+            "time": "2022-06-16T13:53:25+00:00"
         },
         {
             "name": "kint-php/kint",
