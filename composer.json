@@ -1,73 +1,73 @@
 {
-    "name": "codeigniter4projects/playground",
-    "description": "A space to learn and experience CodeIgniter 4",
-    "license": "MIT",
-    "type": "project",
-    "keywords": [
-        "codeigniter",
-        "codeigniter4"
-    ],
-    "authors": [
-        {
-            "name": "Matthew Gatner",
-            "email": "mgatner@tattersoftware.com",
-            "homepage": "https://tattersoftware.com",
-            "role": "Developer"
-        }
-    ],
-    "homepage": "https://codeigniter.com",
-    "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4projects/playground",
-        "slack": "https://codeigniterchat.slack.com"
-    },
-    "require": {
-        "php": "^7.4 || ^8.0",
-        "codeigniter4/framework": "^4.1"
-    },
-    "require-dev": {
-        "psr/container": "1.1.2",
-        "codeigniter4/devkit": "^1.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "phpstan/extension-installer": true
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "exclude-from-classmap": [
-            "**/Database/Migrations/**"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\Support\\": "tests/_support"
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "phpstan/extension-installer": true
-        }
-    },
-    "scripts": {
-        "analyze": "phpstan analyze",
-        "ci": [
-            "Composer\\Config::disableProcessTimeout",
-            "@deduplicate",
-            "@analyze",
-            "@test",
-            "@inspect",
-            "rector process",
-            "@style"
-        ],
-        "deduplicate": "phpcpd app/ src/",
-        "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
-        "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
-        "patch": "patch",
-        "retool": "retool",
-        "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
-        "test": "phpunit"
+  "name": "codeigniter4projects/playground",
+  "description": "A space to learn and experience CodeIgniter 4",
+  "license": "MIT",
+  "type": "project",
+  "keywords": [
+    "codeigniter",
+    "codeigniter4"
+  ],
+  "authors": [
+    {
+      "name": "Matthew Gatner",
+      "email": "mgatner@tattersoftware.com",
+      "homepage": "https://tattersoftware.com",
+      "role": "Developer"
     }
+  ],
+  "homepage": "https://codeigniter.com",
+  "support": {
+    "forum": "http://forum.codeigniter.com/",
+    "source": "https://github.com/codeigniter4projects/playground",
+    "slack": "https://codeigniterchat.slack.com"
+  },
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "codeigniter4/framework": "^4.3"
+  },
+  "require-dev": {
+    "psr/container": "1.1.2",
+    "codeigniter4/devkit": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "exclude-from-classmap": [
+      "**/Database/Migrations/**"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Support\\": "tests/_support"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  },
+  "scripts": {
+    "analyze": "phpstan analyze",
+    "ci": [
+      "Composer\\Config::disableProcessTimeout",
+      "@deduplicate",
+      "@analyze",
+      "@test",
+      "@inspect",
+      "rector process",
+      "@style"
+    ],
+    "deduplicate": "phpcpd app/ src/",
+    "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
+    "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+    "patch": "patch",
+    "retool": "retool",
+    "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
+    "test": "phpunit"
+  }
 }
