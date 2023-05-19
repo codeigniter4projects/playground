@@ -13,7 +13,11 @@
 <body>
 
 <div class="container">
-    <h1>CodeIgniter 4 Playground</h1>
+    <h1 class="text-center">
+        <a href="<?= site_url() ?>">
+            CodeIgniter 4 Playground
+        </a>
+    </h1>
 
     <br>
 
@@ -27,7 +31,10 @@
             <p>Page rendered in {elapsed_time} seconds.</p>
         </div>
         <div class="col">
-            <p class="text-center">PHP <?= PHP_VERSION ?></p>
+            <p class="text-center">
+                CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?> -
+                PHP <?= PHP_VERSION ?>
+            </p>
         </div>
         <div class="col">
             <p class="text-right">Environment: <?= ENVIRONMENT ?></p>
