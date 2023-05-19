@@ -68,7 +68,7 @@
                                 } else {
                                     echo esc(clean_path($row['file']) . ' : ' . $row['line']);
                                 }
-                                ?>
+                    ?>
                             <?php else: ?>
                                 {PHP internal code}
                             <?php endif; ?>
@@ -83,14 +83,14 @@
                                         <table cellspacing="0">
 
                                         <?php
-                                        $params = null;
-                                        // Reflection by name is not available for closure function
-                                        if (substr($row['function'], -1) !== '}') {
-                                            $mirror = isset($row['class']) ? new \ReflectionMethod($row['class'], $row['function']) : new \ReflectionFunction($row['function']);
-                                            $params = $mirror->getParameters();
-                                        }
+                            $params = null;
+                                    // Reflection by name is not available for closure function
+                                    if (substr($row['function'], -1) !== '}') {
+                                        $mirror = isset($row['class']) ? new \ReflectionMethod($row['class'], $row['function']) : new \ReflectionFunction($row['function']);
+                                        $params = $mirror->getParameters();
+                                    }
 
-                                        foreach ($row['args'] as $key => $value) : ?>
+                                    foreach ($row['args'] as $key => $value) : ?>
                                             <tr>
                                                 <td><code><?= esc(isset($params[$key]) ? '$' . $params[$key]->name : "#{$key}") ?></code></td>
                                                 <td><pre><?= esc(print_r($value, true)) ?></pre></td>
@@ -308,8 +308,8 @@
             <!-- Response -->
             <?php
                 $response = \Config\Services::response();
-                $response->setStatusCode(http_response_code());
-            ?>
+$response->setStatusCode(http_response_code());
+?>
             <div class="content" id="response">
                 <table>
                     <tr>

@@ -85,8 +85,8 @@ class CreateMonsters extends Migration
          * it harder to work with databases, so we will leave them off for now. Feel free
          * to uncomment them if you want to play:
          */
-        //$this->forge->addForeignKey('ability_id', 'abilities', 'id', false, 'CASCADE');
-        //$this->forge->addForeignKey('monster_id', 'monsters', 'id', false, 'CASCADE');
+        // $this->forge->addForeignKey('ability_id', 'abilities', 'id', false, 'CASCADE');
+        // $this->forge->addForeignKey('monster_id', 'monsters', 'id', false, 'CASCADE');
 
         $this->forge->createTable('abilities_monsters');
 

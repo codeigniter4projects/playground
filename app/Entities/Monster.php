@@ -26,7 +26,7 @@ class Monster extends Entity
      *
      * @return array
      */
-    //public function getAbilities(): array
-    //{
-    //}
+    // public function getAbilities(): array
+    // {
+    // }
 }

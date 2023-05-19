@@ -68,7 +68,7 @@ class DungeonModel extends Model
      *
      * @return array
      */
-    //public function getMonstersForDungeon(int $dungeonId): array
-    //{
-    //}
+    // public function getMonstersForDungeon(int $dungeonId): array
+    // {
+    // }
 }
