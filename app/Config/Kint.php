@@ -3,7 +3,7 @@
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
-use Kint\Renderer\Renderer;
+use Kint\Renderer\AbstractRenderer as Renderer;
 
 /**
  * --------------------------------------------------------------------------

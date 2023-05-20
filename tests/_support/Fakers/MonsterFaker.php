@@ -22,7 +22,7 @@ class MonsterFaker extends MonsterModel implements FabricatorModel
     public function fake(Generator &$faker): Monster
     {
         return new Monster([
-            'name'   => $faker->lastName,
+            'name'   => $faker->lastName(),
             'health' => mt_rand(1, 50),
 
             /**
