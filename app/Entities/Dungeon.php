@@ -2,6 +2,7 @@
 
 namespace App\Entities;
 
+use App\Models\MonsterModel;
 use CodeIgniter\Entity\Entity;
 
 /**
@@ -33,5 +34,16 @@ class Dungeon extends Entity
     public function link(): string
     {
         return site_url("dungeons/{$this->attributes['id']}");
+    }
+
+    /**
+     * Use another model to get some random data.
+     */
+    public function monsters(int $limit=5)
+    {
+        return model(MonsterModel::class)
+            ->where('dungeon_id', $this->id)
+            ->orderBy('health', 'asc')
+            ->findAll();
     }
 }

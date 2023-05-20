@@ -13,6 +13,17 @@
     `$this->renderSection('content')`.
 -->
 <?= $this->section('content') ?>
+
+    <!-- Display an alert if controller's push
+        data to the view in a redirect, or in
+        session flash data.
+    -->
+    <?php if (session()->has('error')) : ?>
+        <div class="alert alert-danger">
+            <?= session('error') ?>
+        </div>
+    <?php endif ?>
+
     <div class="row">
 
         <!-- Heroes -->
