@@ -58,12 +58,14 @@
       "rector process",
       "@style"
     ],
+    "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff",
+    "cs-fix": "php-cs-fixer fix --ansi --verbose --diff",
+    "style": "@cs-fix",
     "deduplicate": "phpcpd app/ src/",
     "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
     "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
     "patch": "patch",
     "retool": "retool",
-    "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
     "test": "phpunit"
   }
 }
