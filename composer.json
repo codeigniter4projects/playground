@@ -30,11 +30,6 @@
     "codeigniter4/devkit": "^1.0",
     "tatter/patches": "^2.1"
   },
-  "config": {
-    "allow-plugins": {
-      "phpstan/extension-installer": true
-    }
-  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
