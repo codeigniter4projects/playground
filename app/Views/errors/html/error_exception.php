@@ -1,6 +1,6 @@
 <?php
-use Config\Services;
 use CodeIgniter\CodeIgniter;
+use Config\Services;
 
 $errorId = uniqid('error', true);
 ?>
@@ -89,11 +89,11 @@ $errorId = uniqid('error', true);
 
                                         <?php
                                         $params = null;
-                                        // Reflection by name is not available for closure function
-                                        if (substr($row['function'], -1) !== '}') {
-                                            $mirror = isset($row['class']) ? new ReflectionMethod($row['class'], $row['function']) : new ReflectionFunction($row['function']);
-                                            $params = $mirror->getParameters();
-                                        }
+                                    // Reflection by name is not available for closure function
+                                    if (substr($row['function'], -1) !== '}') {
+                                        $mirror = isset($row['class']) ? new ReflectionMethod($row['class'], $row['function']) : new ReflectionFunction($row['function']);
+                                        $params = $mirror->getParameters();
+                                    }
 
                                     foreach ($row['args'] as $key => $value) : ?>
                                             <tr>
@@ -303,8 +303,8 @@ $errorId = uniqid('error', true);
             <!-- Response -->
             <?php
                 $response = Services::response();
-                $response->setStatusCode(http_response_code());
-            ?>
+$response->setStatusCode(http_response_code());
+?>
             <div class="content" id="response">
                 <table>
                     <tr>

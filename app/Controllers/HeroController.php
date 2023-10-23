@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
 use App\Models\HeroModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
@@ -17,9 +16,9 @@ class HeroController extends BaseController
      */
     public function show(int $id)
     {
-         // When you only need to use a model in a single place,
-         // you can simply get a new instance here. It will use
-         // the default database connection if none is passed in
+        // When you only need to use a model in a single place,
+        // you can simply get a new instance here. It will use
+        // the default database connection if none is passed in
         // during instantiation.
         $heroes = new HeroModel();
 

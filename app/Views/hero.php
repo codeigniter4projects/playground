@@ -29,7 +29,7 @@
                 <div class="col-6 mx-auto">
 
                 <div class="card shadow">
-                    <img src="<?= base_url('images/'. esc($hero->image, 'attr')) ?>"
+                    <img src="<?= base_url('images/' . esc($hero->image, 'attr')) ?>"
                         alt="<?= esc($hero->name, 'attr') ?>"
                         class="card-img-top"
                     >

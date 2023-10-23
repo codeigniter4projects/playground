@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
 use App\Models\DungeonModel;
 use App\Models\HeroModel;
 
@@ -39,7 +38,7 @@ class DungeonController extends BaseController
         }
 
         echo view('dungeon', [
-            'dungeon' => $dungeon,
+            'dungeon'  => $dungeon,
             'monsters' => $dungeon->monsters(3),
         ]);
     }
