@@ -1,9 +1,12 @@
 <?php
 
+use CodeIgniter\Test\CIUnitTestCase;
+use Tests\Support\Libraries\ConfigReader;
+
 /**
  * @internal
  */
-final class HealthTest extends \CodeIgniter\Test\CIUnitTestCase
+final class HealthTest extends CIUnitTestCase
 {
     protected function setUp(): void
     {
@@ -31,7 +34,7 @@ final class HealthTest extends \CodeIgniter\Test\CIUnitTestCase
         }
 
         // Then check the actual config file
-        $reader = new \Tests\Support\Libraries\ConfigReader();
+        $reader = new ConfigReader();
         $config = ! empty($reader->baseUrl);
 
         $this->assertTrue($env || $config);
