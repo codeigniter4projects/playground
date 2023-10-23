@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352">
+  <file src="app/Config/Kint.php">
+    <UndefinedClass>
+      <code>AbstractRenderer</code>
+    </UndefinedClass>
+    <UndefinedDocblockClass>
+      <code><![CDATA[array<string, class-string<TabPluginInterface>>]]></code>
+      <code><![CDATA[array<string, class-string<ValuePluginInterface>>]]></code>
+      <code><![CDATA[list<class-string<ConstructablePluginInterface>|ConstructablePluginInterface>]]></code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="app/Config/View.php">
+    <UndefinedDocblockClass>
+      <code><![CDATA[array<string, ParserCallableString>]]></code>
+      <code><![CDATA[array<string, array<ParserCallableString>|ParserCallableString|ParserCallable>]]></code>
+      <code><![CDATA[array<string, array<ParserCallableString>|ParserCallableString|ParserCallable>]]></code>
+      <code>public $filters = [];</code>
+      <code>public $plugins = [];</code>
+      <code>public $plugins = [];</code>
+    </UndefinedDocblockClass>
+  </file>
+</files>
