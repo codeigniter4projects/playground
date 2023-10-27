@@ -27,12 +27,8 @@
   },
   "require-dev": {
     "psr/container": "1.1.2",
-    "codeigniter4/devkit": "^1.0"
-  },
-  "config": {
-    "allow-plugins": {
-      "phpstan/extension-installer": true
-    }
+    "codeigniter4/devkit": "^1.0",
+    "tatter/patches": "^2.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -62,12 +58,14 @@
       "rector process",
       "@style"
     ],
+    "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff",
+    "cs-fix": "php-cs-fixer fix --ansi --verbose --diff",
+    "style": "@cs-fix",
     "deduplicate": "phpcpd app/ src/",
     "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
     "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
     "patch": "patch",
     "retool": "retool",
-    "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
     "test": "phpunit"
   }
 }

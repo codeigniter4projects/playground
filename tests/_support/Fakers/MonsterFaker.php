@@ -23,7 +23,7 @@ class MonsterFaker extends MonsterModel implements FabricatorModel
     {
         return new Monster([
             'name'   => $faker->lastName(),
-            'health' => mt_rand(1, 50),
+            'health' => random_int(1, 50),
 
             /**
              * This is a special function of Fabricator that means "get how many items
@@ -31,7 +31,7 @@ class MonsterFaker extends MonsterModel implements FabricatorModel
              * related items, like the number of possible dungeons. But if none have
              * been made we will just pick a number.
              */
-            'dungeon_id' => mt_rand(1, Fabricator::getCount('dungeons') ?: 3),
+            'dungeon_id' => random_int(1, Fabricator::getCount('dungeons') ?: 3),
         ]);
     }
 }

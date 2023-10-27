@@ -3,8 +3,6 @@
 namespace App\Entities;
 
 use CodeIgniter\Entity\Entity;
-use CodeIgniter\HTTP\Exceptions\HTTPException;
-use InvalidArgumentException;
 
 /**
  * Class Monster
