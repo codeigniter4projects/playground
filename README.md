@@ -26,7 +26,7 @@ To setup a working playground on your own local device, read through the next se
 
 In order to get the playground setup on your own computer, you'll need a few minimum requirements - all of which
 are listed on [CodeIgniter's repo](https://github.com/codeigniter4/CodeIgniter4#server-requirements). Basically,
-as long as you are running PHP 7.2 or later you'll meet most of them.
+as long as you are running PHP 7.4 or later you'll meet most of them.
 
 While CodeIgniter does not require it, using this repo also requires the use of
 [Composer](https://getcomposer.org/) to install CodeIgniter as a dependency, and PHPUnit - the test framework.
