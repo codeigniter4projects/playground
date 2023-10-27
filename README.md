@@ -26,7 +26,7 @@ To setup a working playground on your own local device, read through the next se
 
 In order to get the playground setup on your own computer, you'll need a few minimum requirements - all of which
 are listed on [CodeIgniter's repo](https://github.com/codeigniter4/CodeIgniter4#server-requirements). Basically,
-as long as you are running PHP 7.2 or later you'll meet most of them.
+as long as you are running PHP 7.4 or later you'll meet most of them.
 
 While CodeIgniter does not require it, using this repo also requires the use of
 [Composer](https://getcomposer.org/) to install CodeIgniter as a dependency, and PHPUnit - the test framework.
@@ -40,14 +40,16 @@ With those out of the way, it only takes a few small steps to get the project up
 
 1 - Clone the repo if you haven't already, from the CLI:
 
-    git clone https://github.com/codeigniter4projects/playground
+```console
+git clone https://github.com/codeigniter4projects/playground
+```
 
 That creates a new directory, `playground`, under your current directory.
 
 2 - Enter the new directory and install the project dependencies with Composer. NOTE: The command shown
 here assumes that you have Composer loaded globally. If you don't, then pretend we're using `composer.phar`.
 
-```
+```console
 cd playground
 composer install
 ```
@@ -66,7 +68,7 @@ composer install
 
 4 - Back on the command line, we install all of the needed database tables and sample data.
 
-```
+```console
 php spark migrate
 php spark db:seed PlaygroundSeeder
 ```
@@ -74,11 +76,15 @@ php spark db:seed PlaygroundSeeder
 5 - That's it! If you're hosting through Apache, Nginx, etc, then head to your site. If you just want a quick
 way to work with your site locally, go back to the CLI and start up `spark`, CodeIgniter's small server.
 
-    php spark serve
+```console
+php spark serve
+```
 
 If you get would like to change the port it's running on, that's no problem:
 
-    php spark serve --port 8081
+```console
+php spark serve --port 8081
+```
 
 Enjoy!
 
