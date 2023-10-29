@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\DungeonModel;
 use App\Models\HeroModel;
+use CodeIgniter\HTTP\ResponseInterface;
 
 class DungeonController extends BaseController
 {
@@ -28,6 +29,8 @@ class DungeonController extends BaseController
      * The $id parameter is the hero's ID, and is
      * passed in from the route definition as $1,
      * since it is the first placeholder in the route.
+     *
+     * @return ResponseInterface|string
      */
     public function show(int $id)
     {
@@ -37,7 +40,7 @@ class DungeonController extends BaseController
             return redirect()->back()->with('error', 'Dungeon not found');
         }
 
-        echo view('dungeon', [
+        return view('dungeon', [
             'dungeon'  => $dungeon,
             'monsters' => $dungeon->monsters(3),
         ]);
