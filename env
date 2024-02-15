@@ -140,4 +140,4 @@ app.baseURL = 'http://localhost:8080'
 # CURLRequest
 #--------------------------------------------------------------------
 
-# curlrequest.shareOptions = true
+# curlrequest.shareOptions = false
