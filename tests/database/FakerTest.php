@@ -44,6 +44,7 @@ final class FakerTest extends DatabaseTestCase
     public function testMakesMonsterWithDungeon()
     {
         $monster = $this->fabricator->make();
+        /** @var Dungeon $dungeon */
         $dungeon = model(DungeonModel::class)->find($monster->dungeon_id);
 
         $this->assertInstanceOf(Dungeon::class, $dungeon);
