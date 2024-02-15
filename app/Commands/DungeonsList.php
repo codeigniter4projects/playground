@@ -29,7 +29,7 @@ class DungeonsList extends BaseCommand
     protected $usage = 'dungeons:list';
 
     /**
-     * @var mixed[]
+     * @var array<string, string>
      */
     protected $arguments = [];
 
