@@ -43,8 +43,8 @@ final class FakerTest extends DatabaseTestCase
     // Since our Faker uses Fabricator counts for its dungeon_id we should always have a valid dungeon available
     public function testMakesMonsterWithDungeon()
     {
+        /** @var Monster $monster */
         $monster = $this->fabricator->make();
-        /** @var Dungeon $dungeon */
         $dungeon = model(DungeonModel::class)->find($monster->dungeon_id);
 
         $this->assertInstanceOf(Dungeon::class, $dungeon);
