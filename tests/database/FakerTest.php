@@ -34,6 +34,7 @@ final class FakerTest extends DatabaseTestCase
     public function testMakesValidMonster()
     {
         // We can use make() to generate a random dataset defined in our Faker
+        /** @var Monster $monster */
         $monster = $this->fabricator->make();
 
         $this->assertInstanceOf(Monster::class, $monster);
@@ -53,6 +54,7 @@ final class FakerTest extends DatabaseTestCase
     public function testCreateAddsToDatabase()
     {
         // create() generates a random dataset just like make() but also adds it to the database for us
+        /** @var Monster $monster */
         $monster = $this->fabricator->create();
         $this->assertIsInt($monster->id);
 
