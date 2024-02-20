@@ -3,41 +3,43 @@
 namespace App\Controllers;
 
 use App\Models\DungeonModel;
-use App\Models\HeroModel;
+use CodeIgniter\HTTP\ResponseInterface;
 
 class DungeonController extends BaseController
 {
     /**
-     * HeroModel instance.
+     * DungeonModel instance.
      */
-    protected $heroes;
+    protected DungeonModel $dungeons;
 
     public function __construct()
     {
-        // Assign the model to $this->heroes
+        // Assign the model to $this->dungeons
         // so that it's available throughout this class
         // Use the `model()` helper method to return
         // a single instance of the model no matter
         // how many times we call it
-        $this->heroes = model(DungeonModel::class);
+        $this->dungeons = model(DungeonModel::class);
     }
 
     /**
-     * View a single hero's details.
+     * View a single dungeon's details.
      *
-     * The $id parameter is the hero's ID, and is
+     * The $id parameter is the dungeon's ID, and is
      * passed in from the route definition as $1,
      * since it is the first placeholder in the route.
+     *
+     * @return ResponseInterface|string
      */
     public function show(int $id)
     {
-        $dungeon = $this->heroes->find($id);
+        $dungeon = $this->dungeons->find($id);
 
         if ($dungeon === null) {
             return redirect()->back()->with('error', 'Dungeon not found');
         }
 
-        echo view('dungeon', [
+        return view('dungeon', [
             'dungeon'  => $dungeon,
             'monsters' => $dungeon->monsters(3),
         ]);

@@ -34,6 +34,7 @@ final class FakerTest extends DatabaseTestCase
     public function testMakesValidMonster()
     {
         // We can use make() to generate a random dataset defined in our Faker
+        /** @var Monster $monster */
         $monster = $this->fabricator->make();
 
         $this->assertInstanceOf(Monster::class, $monster);
@@ -43,6 +44,7 @@ final class FakerTest extends DatabaseTestCase
     // Since our Faker uses Fabricator counts for its dungeon_id we should always have a valid dungeon available
     public function testMakesMonsterWithDungeon()
     {
+        /** @var Monster $monster */
         $monster = $this->fabricator->make();
         $dungeon = model(DungeonModel::class)->find($monster->dungeon_id);
 
@@ -52,6 +54,7 @@ final class FakerTest extends DatabaseTestCase
     public function testCreateAddsToDatabase()
     {
         // create() generates a random dataset just like make() but also adds it to the database for us
+        /** @var Monster $monster */
         $monster = $this->fabricator->create();
         $this->assertIsInt($monster->id);
 

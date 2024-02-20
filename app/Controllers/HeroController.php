@@ -14,7 +14,7 @@ class HeroController extends BaseController
      * passed in from the route definition as $1,
      * since it is the first placeholder in the route.
      */
-    public function show(int $id)
+    public function show(int $id): string
     {
         // When you only need to use a model in a single place,
         // you can simply get a new instance here. It will use
@@ -30,10 +30,10 @@ class HeroController extends BaseController
             throw new PageNotFoundException('Hero not found');
         }
 
-        // Display a view file, passing the variables
+        // Return a view, passing the variables
         // you want to access in the view within the
         // second parameter.
-        echo view('hero', [
+        return view('hero', [
             'hero' => $hero,
         ]);
     }

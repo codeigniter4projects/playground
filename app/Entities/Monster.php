@@ -9,6 +9,8 @@ use CodeIgniter\Entity\Entity;
  *
  * This class represents a single row in the
  * `monsters` database.
+ *
+ * @property int $dungeon_id
  */
 class Monster extends Entity
 {

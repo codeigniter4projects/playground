@@ -11,7 +11,6 @@ parameters:
 		- app/Views/*
 	ignoreErrors:
 		- '#Call to an undefined method CodeIgniter\\Database\\ConnectionInterface::(en|dis)ableForeignKeyChecks#'
-		- '#Cannot access property [\$a-z_]+ on (array|object)#'
 	universalObjectCratesClasses:
 		- CodeIgniter\Entity
 		- CodeIgniter\Entity\Entity
