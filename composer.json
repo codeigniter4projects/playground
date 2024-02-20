@@ -26,7 +26,7 @@
     "codeigniter4/framework": "^4.3"
   },
   "require-dev": {
-    "psr/container": "1.1.2",
+    "psr/container": "2.0.2",
     "codeigniter4/devkit": "^1.0",
     "tatter/patches": "^2.1",
     "kint-php/kint": "^5.1",
