@@ -31,7 +31,7 @@
     "codeigniter4/devkit": "^1.0",
     "tatter/patches": "^2.1",
     "liaison/revision": "^1.1",
-    "kint-php/kint": "^5.1",
+    "kint-php/kint": "^6.0",
     "codeigniter/phpstan-codeigniter": "^1.4"
   },
   "minimum-stability": "dev",
