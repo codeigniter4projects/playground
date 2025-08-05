@@ -1,6 +1,7 @@
 <?php
 
 use CodeIgniter\Test\CIUnitTestCase;
+use Config\App;
 use Tests\Support\Libraries\ConfigReader;
 
 /**
@@ -20,23 +21,36 @@ final class HealthTest extends CIUnitTestCase
         $this->assertTrue($test);
     }
 
-    public function testBaseUrlHasBeenSet()
+    public function testBaseUrlHasBeenSet(): void
     {
-        if (getenv('CI') !== false) {
-            $this->markTestSkipped('Base URL not available during Continuous Integration');
-        }
+        $validation = service('validation');
 
-        $env = $config = false;
+        $env = false;
 
-        // First check in .env
+        // Check the baseURL in .env
         if (is_file(HOMEPATH . '.env')) {
-            $env = (bool) preg_grep("/^app\\.baseURL = './", file(HOMEPATH . '.env'));
+            $env = preg_grep('/^app\.baseURL = ./', file(HOMEPATH . '.env')) !== false;
         }
 
-        // Then check the actual config file
-        $reader = new ConfigReader();
-        $config = ! empty($reader->baseUrl);
+        if ($env) {
+            // BaseURL in .env is a valid URL?
+            // phpunit.xml.dist sets app.baseURL in $_SERVER
+            // So if you set app.baseURL in .env, it takes precedence
+            $config = new App();
+            $this->assertTrue(
+                $validation->check($config->baseURL, 'valid_url'),
+                'baseURL "' . $config->baseURL . '" in .env is not valid URL',
+            );
+        }
 
-        $this->assertTrue($env || $config);
+        // Get the baseURL in app/Config/App.php
+        // You can't use Config\App, because phpunit.xml.dist sets app.baseURL
+        $reader = new ConfigReader();
+
+        // BaseURL in app/Config/App.php is a valid URL?
+        $this->assertTrue(
+            $validation->check($reader->baseURL, 'valid_url'),
+            'baseURL "' . $reader->baseURL . '" in app/Config/App.php is not valid URL',
+        );
     }
 }
