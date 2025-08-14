@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
-		bootstrap="vendor/codeigniter4/framework/system/Test/bootstrap.php"
-		backupGlobals="false"
-		beStrictAboutCoversAnnotation="true"
-		beStrictAboutOutputDuringTests="true"
-		beStrictAboutTodoAnnotatedTests="true"
-		colors="true"
-		convertErrorsToExceptions="true"
-		convertNoticesToExceptions="true"
-		convertWarningsToExceptions="true"
-		executionOrder="random"
-		failOnRisky="true"
-		failOnWarning="true"
-		stopOnError="false"
-		stopOnFailure="false"
-		stopOnIncomplete="false"
-		stopOnSkipped="false"
-		verbose="true">
+		 xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+		 bootstrap="vendor/codeigniter4/framework/system/Test/bootstrap.php"
+		 backupGlobals="false"
+		 beStrictAboutOutputDuringTests="true"
+		 colors="true"
+		 executionOrder="random"
+		 failOnRisky="true"
+		 failOnWarning="true"
+		 stopOnError="false"
+		 stopOnFailure="false"
+		 stopOnIncomplete="false"
+		 stopOnSkipped="false"
+		 cacheDirectory="build/.phpunit.cache"
+		 beStrictAboutCoverageMetadata="true">
 
-	<coverage includeUncoveredFiles="true" processUncoveredFiles="true">
-		<include>
-			<directory suffix=".php">./app/</directory>
-		</include>
-		<exclude>
-			<directory suffix=".php">./app/Config</directory>
-			<directory suffix=".php">./app/Views</directory>
-		</exclude>
+	<coverage includeUncoveredFiles="true">
 		<report>
 			<clover outputFile="build/phpunit/clover.xml"/>
 			<html outputDirectory="build/phpunit/html"/>
@@ -43,27 +32,11 @@
 	</testsuites>
 
 	<extensions>
-		<extension class="Nexus\PHPUnit\Extension\Tachycardia">
-			<arguments>
-				<array>
-					<element key="timeLimit">
-						<double>0.50</double>
-					</element>
-					<element key="reportable">
-						<integer>30</integer>
-					</element>
-					<element key="precision">
-						<integer>2</integer>
-					</element>
-					<element key="collectBare">
-						<boolean>true</boolean>
-					</element>
-					<element key="tabulate">
-						<boolean>true</boolean>
-					</element>
-				</array>
-			</arguments>
-		</extension>
+		<bootstrap class="Nexus\PHPUnit\Tachycardia\TachycardiaExtension">
+			<parameter name="time-limit" value="0.50"/>
+			<parameter name="report-count" value="30"/>
+			<parameter name="format" value="table"/>
+		</bootstrap>
 	</extensions>
 
 	<logging>
@@ -75,6 +48,7 @@
 	<php>
 		<env name="XDEBUG_MODE" value="coverage"/>
 		<server name="app.baseURL" value="https://example.com/"/>
+		<const name="cache.handler" value="dummy"/>
 
 		<!-- Directory containing phpunit.xml -->
 		<const name="HOMEPATH" value="./"/>
@@ -91,12 +65,22 @@
 		<!-- Database configuration -->
 		<env name="database.tests.strictOn" value="true"/>
 		<!-- Uncomment to use alternate testing database configuration
-		<env name="database.tests.hostname" value="localhost"/>
-		<env name="database.tests.database" value="tests"/>
-		<env name="database.tests.username" value="tests_user"/>
-		<env name="database.tests.password" value=""/>
-		<env name="database.tests.DBDriver" value="MySQLi"/>
-		<env name="database.tests.DBPrefix" value="tests_"/>
-		-->
+        <env name="database.tests.hostname" value="localhost"/>
+        <env name="database.tests.database" value="tests"/>
+        <env name="database.tests.username" value="tests_user"/>
+        <env name="database.tests.password" value=""/>
+        <env name="database.tests.DBDriver" value="MySQLi"/>
+        <env name="database.tests.DBPrefix" value="tests_"/>
+        -->
 	</php>
+
+	<source>
+		<include>
+			<directory suffix=".php">./app/</directory>
+		</include>
+		<exclude>
+			<directory suffix=".php">./app/Config</directory>
+			<directory suffix=".php">./app/Views</directory>
+		</exclude>
+	</source>
 </phpunit>
