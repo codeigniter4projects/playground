@@ -7,9 +7,10 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
     autoloader="psalm_autoload.php"
     cacheDirectory="build/psalm/"
-    errorBaseline="psalm-baseline.xml"
-    findUnusedBaselineEntry="false"
+    findUnusedBaselineEntry="true"
     findUnusedCode="false"
+    errorBaseline="psalm-baseline.xml"
+    ensureOverrideAttribute="false"
 >
     <projectFiles>
         <directory name="app/" />
