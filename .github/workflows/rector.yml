@@ -20,4 +20,11 @@ on:
 
 jobs:
   rector:
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['8.2', '8.4']
+
     uses: codeigniter4/.github/.github/workflows/rector.yml@CI46
+    with:
+      php-version: ${{ matrix.php-version }}

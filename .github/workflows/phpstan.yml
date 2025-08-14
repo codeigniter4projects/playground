@@ -20,4 +20,11 @@ on:
 
 jobs:
   phpstan:
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['8.2', '8.3', '8.4']
+
     uses: codeigniter4/.github/.github/workflows/phpstan.yml@CI46
+    with:
+      php-version: ${{ matrix.php-version }}

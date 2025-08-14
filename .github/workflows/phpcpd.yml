@@ -19,3 +19,4 @@ jobs:
     uses: codeigniter4/.github/.github/workflows/phpcpd.yml@CI46
     with:
       dirs: "src/ tests/"
+      php-version: '8.2'
