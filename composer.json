@@ -22,7 +22,7 @@
     "slack": "https://codeigniterchat.slack.com"
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.2",
     "codeigniter4/framework": "4.6.*"
   },
   "require-dev": {
