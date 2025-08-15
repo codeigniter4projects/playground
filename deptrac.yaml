@@ -1,4 +1,4 @@
-parameters:
+deptrac:
   paths:
     - ./app/
     - ./vendor/codeigniter4/framework/system/
@@ -9,90 +9,90 @@ parameters:
       collectors:
         - type: bool
           must:
-          - type: className
-            regex: .*[A-Za-z]+Model$
+            - type: class
+              value: .*[A-Za-z]+Model$
           must_not:
-          - type: directory
-            regex: vendor/.*
+            - type: directory
+              value: vendor/.*
     - name: Vendor Model
       collectors:
         - type: bool
           must:
-          - type: className
-            regex: .*[A-Za-z]+Model$
-          - type: directory
-            regex: vendor/.*
+            - type: class
+              value: .*[A-Za-z]+Model$
+            - type: directory
+              value: vendor/.*
     - name: Controller
       collectors:
         - type: bool
           must:
-          - type: className
-            regex: .*\/Controllers\/.*
+            - type: class
+              value: .*\/Controllers\/.*
           must_not:
-          - type: directory
-            regex: vendor/.*
+            - type: directory
+              value: vendor/.*
     - name: Vendor Controller
       collectors:
         - type: bool
           must:
-          - type: className
-            regex: .*\/Controllers\/.*
-          - type: directory
-            regex: vendor/.*
+            - type: class
+              value: .*\/Controllers\/.*
+            - type: directory
+              value: vendor/.*
     - name: Config
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: app/Config/.*
+            - type: directory
+              value: src/Config/.*
           must_not:
-          - type: className
-            regex: .*Services
-          - type: directory
-            regex: vendor/.*
+            - type: class
+              value: .*Services
+            - type: directory
+              value: vendor/.*
     - name: Vendor Config
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: vendor/.*/Config/.*
+            - type: directory
+              value: vendor/.*/Config/.*
           must_not:
-          - type: className
-            regex: .*Services
+            - type: class
+              value: .*Services
     - name: Entity
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: app/Entities/.*
+            - type: directory
+              value: src/Entities/.*
           must_not:
-          - type: directory
-            regex: vendor/.*
+            - type: directory
+              value: vendor/.*
     - name: Vendor Entity
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: vendor/.*/Entities/.*
+            - type: directory
+              value: vendor/.*/Entities/.*
     - name: View
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: app/Views/.*
+            - type: directory
+              value: src/Views/.*
           must_not:
-          - type: directory
-            regex: vendor/.*
+            - type: directory
+              value: vendor/.*
     - name: Vendor View
       collectors:
         - type: bool
           must:
-          - type: directory
-            regex: vendor/.*/Views/.*
+            - type: directory
+              value: vendor/.*/Views/.*
     - name: Service
       collectors:
-        - type: className
-          regex: .*Services.*
+        - type: class
+          value: .*Services.*
   ruleset:
     Entity:
       - Config
@@ -114,7 +114,7 @@ parameters:
     Service:
       - Config
       - Vendor Config
-  
+
     # Ignore anything in the Vendor layers
     Vendor Model:
       - Config
