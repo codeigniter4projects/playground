@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Support;
 
 use CodeIgniter\Database\Seeder;
@@ -42,7 +44,7 @@ abstract class DatabaseTestCase extends CIUnitTestCase
      * Note that running "all" runs migrations in date order,
      * but specifying namespaces runs them in namespace order (then date)
      *
-     * @var array|string|null
+     * @var list<string>|string|null
      */
     protected $namespace = 'App';
 

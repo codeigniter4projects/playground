@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Entities\Dungeon;
 use App\Entities\Monster;
 use App\Models\DungeonModel;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use CodeIgniter\Test\CIUnitTestCase;
 use Config\App;
 use Tests\Support\Libraries\ConfigReader;
