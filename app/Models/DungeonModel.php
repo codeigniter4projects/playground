@@ -22,7 +22,7 @@ class DungeonModel extends Model
     // You don't have to extend CI's Entity class, though,
     // any class can be used.
     /**
-     * @var string
+     * @var 'array'|'object'|class-string
      */
     protected $returnType = Dungeon::class;
 

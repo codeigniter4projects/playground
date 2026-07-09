@@ -17,7 +17,7 @@ class AbilityModel extends Model
     protected $primaryKey = 'id';
 
     /**
-     * @var string
+     * @var 'array'|'object'|class-string
      */
     protected $returnType = 'object';
 
