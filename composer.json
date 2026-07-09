@@ -23,7 +23,7 @@
   },
   "require": {
     "php": "^8.2",
-    "codeigniter4/framework": "4.6.*"
+    "codeigniter4/framework": "^4.7"
   },
   "require-dev": {
     "psr/container": "2.0.2",
