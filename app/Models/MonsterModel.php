@@ -18,7 +18,7 @@ class MonsterModel extends Model
     protected $primaryKey = 'id';
 
     /**
-     * @var string
+     * @var 'array'|'object'|class-string
      */
     protected $returnType = Monster::class;
 

@@ -14,4 +14,4 @@ jobs:
   infection:
     uses: codeigniter4/.github/.github/workflows/infection.yml@CI46
     with:
-      php-version: '8.2'
+      php-version: '8.3'

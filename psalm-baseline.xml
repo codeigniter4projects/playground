@@ -1,13 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.24.0@462c80e31c34e58cc4f750c656be3927e80e550e">
-  <file src="app/Config/View.php">
-    <UndefinedDocblockClass>
-      <code><![CDATA[array<string, list<parser_callable_string>|parser_callable_string|parser_callable>]]></code>
-      <code><![CDATA[array<string, list<parser_callable_string>|parser_callable_string|parser_callable>]]></code>
-      <code><![CDATA[array<string, parser_callable_string>]]></code>
-      <code><![CDATA[public $filters = [];]]></code>
-      <code><![CDATA[public $plugins = [];]]></code>
-      <code><![CDATA[public $plugins = [];]]></code>
-    </UndefinedDocblockClass>
-  </file>
 </files>
