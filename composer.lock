@@ -2128,16 +2128,16 @@
         },
         {
             "name": "kint-php/kint",
-            "version": "6.1.0",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kint-php/kint.git",
-                "reference": "dd0f723029e3ebd0fa4edd895fa408bb2ce7003e"
+                "reference": "5c86b6a6396a9698a8e0f94a9a6fd2bcd2dce0e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kint-php/kint/zipball/dd0f723029e3ebd0fa4edd895fa408bb2ce7003e",
-                "reference": "dd0f723029e3ebd0fa4edd895fa408bb2ce7003e",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/5c86b6a6396a9698a8e0f94a9a6fd2bcd2dce0e7",
+                "reference": "5c86b6a6396a9698a8e0f94a9a6fd2bcd2dce0e7",
                 "shasum": ""
             },
             "require": {
@@ -2147,7 +2147,7 @@
                 "friendsofphp/php-cs-fixer": "^3",
                 "phpunit/phpunit": "^9",
                 "seld/phar-utils": "^1",
-                "symfony/finder": ">=7",
+                "symfony/finder": "^8.1",
                 "vimeo/psalm": "^6"
             },
             "suggest": {
@@ -2185,9 +2185,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kint-php/kint/issues",
-                "source": "https://github.com/kint-php/kint/tree/6.1.0"
+                "source": "https://github.com/kint-php/kint/tree/6.1.1"
             },
-            "time": "2025-11-08T12:59:43+00:00"
+            "time": "2026-10-31T12:29:39+00:00"
         },
         {
             "name": "league/uri",
